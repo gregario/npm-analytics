@@ -45,6 +45,16 @@ async function loadData() {
 
   allDates = Object.keys(allData).sort();
 
+  // Drop the last date if all downloads are zero (incomplete/unreported day)
+  if (allDates.length > 0) {
+    const lastDate = allDates[allDates.length - 1];
+    const pkgs = allData[lastDate];
+    const allZero = Object.values(pkgs).every(p => (p.downloads ?? 0) === 0);
+    if (allZero) {
+      allDates.pop();
+    }
+  }
+
   // Discover all packages
   const pkgSet = new Set();
   for (const date of allDates) {
