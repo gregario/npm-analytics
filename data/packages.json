@@ -1,0 +1,10 @@
+{
+  "last_discovered": "2026-03-16",
+  "packages": [
+    "warhammer-oracle",
+    "godot-forge",
+    "brewers-almanack",
+    "mtg-oracle",
+    "lego-oracle"
+  ]
+}
