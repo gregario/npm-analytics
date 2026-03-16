@@ -2,7 +2,9 @@
 
 Daily npm download and GitHub stats tracker with interactive dashboard.
 
-Auto-discovers all [gregario](https://www.npmjs.com/~gregario) npm packages, collects daily download counts, GitHub stars, and forks. Stores historical data as flat JSON. Renders interactive charts on GitHub Pages.
+Auto-discovers all [gr3gario](https://www.npmjs.com/~gr3gario) npm packages, collects daily download counts, GitHub stars, and forks. Stores historical data as flat JSON. Renders interactive charts on GitHub Pages.
+
+**[View Dashboard](https://gregario.github.io/npm-analytics/)**
 
 ## How it works
 
