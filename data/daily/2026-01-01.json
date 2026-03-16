@@ -1,0 +1,30 @@
+{
+  "date": "2026-01-01",
+  "packages": {
+    "warhammer-oracle": {
+      "downloads": 0,
+      "stars": 0,
+      "forks": 1
+    },
+    "godot-forge": {
+      "downloads": 0,
+      "stars": 1,
+      "forks": 1
+    },
+    "brewers-almanack": {
+      "downloads": 0,
+      "stars": 1,
+      "forks": 1
+    },
+    "mtg-oracle": {
+      "downloads": 0,
+      "stars": 1,
+      "forks": 1
+    },
+    "lego-oracle": {
+      "downloads": 0,
+      "stars": 0,
+      "forks": 1
+    }
+  }
+}
