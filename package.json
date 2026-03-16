@@ -1,0 +1,11 @@
+{
+  "name": "npm-analytics",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "collect": "node scripts/collect.mjs",
+    "backfill": "node scripts/backfill.mjs"
+  },
+  "license": "MIT"
+}
