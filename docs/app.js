@@ -11,6 +11,7 @@ let allPackages = [];   // package names
 let activeRange = 90;
 let activeAgg = 'daily';
 let activePackages = new Set();
+let showTotal = true;
 
 let chartOverview = null;
 let chartPackages = null;
@@ -196,6 +197,24 @@ function renderPackagesChart() {
     pointRadius: 1,
   }));
 
+  // Total line: sum of all active packages per period
+  if (showTotal && activePkgs.length > 0) {
+    datasets.unshift({
+      label: 'Total',
+      data: groups.map(g => {
+        let sum = 0;
+        for (const pkg of activePkgs) sum += sumDownloads(g, pkg);
+        return sum;
+      }),
+      borderColor: '#ffffff',
+      borderWidth: 3,
+      fill: false,
+      tension: 0.3,
+      pointRadius: 0,
+      borderDash: [],
+    });
+  }
+
   const ctx = document.getElementById('chart-packages');
   if (chartPackages) chartPackages.destroy();
   chartPackages = new Chart(ctx, {
@@ -272,6 +291,21 @@ function setupControls() {
 
   // Package filter checkboxes
   const container = document.getElementById('package-filters');
+
+  // Total toggle
+  const totalLabel = document.createElement('label');
+  totalLabel.className = 'pkg-filter pkg-filter-total';
+  const totalCb = document.createElement('input');
+  totalCb.type = 'checkbox';
+  totalCb.checked = true;
+  totalCb.addEventListener('change', () => {
+    showTotal = totalCb.checked;
+    renderAll();
+  });
+  totalLabel.appendChild(totalCb);
+  totalLabel.appendChild(document.createTextNode('Total'));
+  container.appendChild(totalLabel);
+
   for (const pkg of allPackages) {
     const label = document.createElement('label');
     label.className = 'pkg-filter';
