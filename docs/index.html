@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>npm Analytics</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>npm Analytics</h1>
+    <p class="subtitle">Daily download and GitHub stats for <a href="https://www.npmjs.com/~gr3gario" target="_blank">gr3gario</a> packages</p>
+  </header>
+
+  <div class="cards" id="cards">
+    <div class="card">
+      <div class="card-label">Total Downloads</div>
+      <div class="card-value" id="total-downloads">--</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Stars</div>
+      <div class="card-value" id="total-stars">--</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Forks</div>
+      <div class="card-value" id="total-forks">--</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Packages</div>
+      <div class="card-value" id="package-count">--</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="control-group">
+      <span class="control-label">Range:</span>
+      <button class="range-btn" data-range="7">7d</button>
+      <button class="range-btn" data-range="30">30d</button>
+      <button class="range-btn active" data-range="90">90d</button>
+      <button class="range-btn" data-range="all">All</button>
+    </div>
+    <div class="control-group">
+      <span class="control-label">Aggregation:</span>
+      <button class="agg-btn active" data-agg="daily">Daily</button>
+      <button class="agg-btn" data-agg="weekly">Weekly</button>
+      <button class="agg-btn" data-agg="monthly">Monthly</button>
+    </div>
+    <div class="control-group" id="package-filters">
+      <span class="control-label">Packages:</span>
+    </div>
+  </div>
+
+  <div class="chart-container">
+    <h2>Downloads Overview</h2>
+    <canvas id="chart-overview"></canvas>
+  </div>
+
+  <div class="chart-container">
+    <h2>Per-Package Downloads</h2>
+    <canvas id="chart-packages"></canvas>
+  </div>
+
+  <div class="chart-container">
+    <h2>Stars &amp; Forks</h2>
+    <canvas id="chart-stars"></canvas>
+  </div>
+
+  <footer>
+    <p>Data collected daily via GitHub Actions. <a href="https://github.com/gregario/npm-analytics" target="_blank">Source</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
