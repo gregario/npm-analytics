@@ -13,7 +13,6 @@ let activeAgg = 'daily';
 let activePackages = new Set();
 let showTotal = true;
 
-let chartOverview = null;
 let chartPackages = null;
 let chartStars = null;
 
@@ -151,37 +150,6 @@ function chartDefaults() {
   };
 }
 
-function renderOverviewChart() {
-  const dates = filterDates(allDates, activeRange);
-  const { labels, groups } = aggregateData(dates, activeAgg);
-  const activePkgs = allPackages.filter(p => activePackages.has(p));
-
-  const datasets = activePkgs.map((pkg, i) => ({
-    label: pkg,
-    data: groups.map(g => sumDownloads(g, pkg)),
-    backgroundColor: COLORS[i % COLORS.length] + '40',
-    borderColor: COLORS[i % COLORS.length],
-    borderWidth: 1.5,
-    fill: true,
-    tension: 0.3,
-    pointRadius: 0,
-  }));
-
-  const ctx = document.getElementById('chart-overview');
-  if (chartOverview) chartOverview.destroy();
-  chartOverview = new Chart(ctx, {
-    type: 'line',
-    data: { labels, datasets },
-    options: {
-      ...chartDefaults(),
-      scales: {
-        ...chartDefaults().scales,
-        y: { ...chartDefaults().scales.y, stacked: true },
-      },
-    },
-  });
-}
-
 function renderPackagesChart() {
   const dates = filterDates(allDates, activeRange);
   const { labels, groups } = aggregateData(dates, activeAgg);
@@ -261,7 +229,6 @@ function renderStarsChart() {
 
 function renderAll() {
   renderCards();
-  renderOverviewChart();
   renderPackagesChart();
   renderStarsChart();
 }
