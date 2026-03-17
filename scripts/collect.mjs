@@ -49,27 +49,26 @@ async function discoverPackages() {
 }
 
 async function getPackages() {
-  if (existsSync(PACKAGES_FILE)) {
-    const cached = JSON.parse(readFileSync(PACKAGES_FILE, 'utf-8'));
-    const age = (Date.now() - new Date(cached.last_discovered).getTime()) / (1000 * 60 * 60 * 24);
-    if (age < 7) {
-      console.error(`[packages] Using cached list (${cached.packages.length} packages, ${age.toFixed(1)} days old)`);
-      return cached.packages;
-    }
-    console.error('[packages] Cache older than 7 days, re-discovering...');
-  }
+  const previousPackages = existsSync(PACKAGES_FILE)
+    ? JSON.parse(readFileSync(PACKAGES_FILE, 'utf-8')).packages
+    : [];
 
   const packages = await discoverPackages();
   if (!packages || packages.length === 0) {
-    if (existsSync(PACKAGES_FILE)) {
+    if (previousPackages.length > 0) {
       console.error('[packages] Discovery failed, falling back to cache');
-      return JSON.parse(readFileSync(PACKAGES_FILE, 'utf-8')).packages;
+      return { packages: previousPackages, newPackages: [] };
     }
     throw new Error('No packages found and no cache available');
   }
 
+  const newPackages = packages.filter(p => !previousPackages.includes(p));
+  if (newPackages.length > 0) {
+    console.error(`[packages] New packages detected: ${newPackages.join(', ')}`);
+  }
+
   writeFileSync(PACKAGES_FILE, JSON.stringify({ last_discovered: today(), packages }, null, 2) + '\n');
-  return packages;
+  return { packages, newPackages };
 }
 
 // --- Data Fetching ---
@@ -127,6 +126,57 @@ async function repairZeroDay(date, packages) {
   }
 }
 
+// --- Backfill new packages ---
+
+async function backfillNewPackages(newPackages) {
+  const existingFiles = readdirSync(DAILY_DIR).filter(f => f.endsWith('.json')).sort();
+  if (existingFiles.length === 0) return;
+
+  const firstDate = existingFiles[0].replace('.json', '');
+  const lastDate = existingFiles[existingFiles.length - 1].replace('.json', '');
+  console.error(`[backfill] Backfilling ${newPackages.length} new packages across ${existingFiles.length} days (${firstDate} to ${lastDate})`);
+
+  // Fetch download ranges for new packages
+  const downloadsByPkg = {};
+  for (const pkg of newPackages) {
+    console.error(`[backfill] Fetching download range for ${pkg}...`);
+    const url = `https://api.npmjs.org/downloads/range/${firstDate}:${lastDate}/${pkg}`;
+    const data = await fetchJSON(url);
+    downloadsByPkg[pkg] = {};
+    if (data && data.downloads) {
+      for (const entry of data.downloads) {
+        downloadsByPkg[pkg][entry.day] = entry.downloads;
+      }
+    }
+  }
+
+  // Fetch GitHub stats for new packages
+  const statsByPkg = {};
+  for (const pkg of newPackages) {
+    const { stars, forks } = await fetchGitHubStats(pkg);
+    statsByPkg[pkg] = { stars, forks };
+  }
+
+  // Merge into existing daily files
+  for (const file of existingFiles) {
+    const dailyFile = join(DAILY_DIR, file);
+    const date = file.replace('.json', '');
+    const existing = JSON.parse(readFileSync(dailyFile, 'utf-8'));
+    for (const pkg of newPackages) {
+      if (!existing.packages[pkg]) {
+        existing.packages[pkg] = {
+          downloads: downloadsByPkg[pkg][date] ?? 0,
+          stars: statsByPkg[pkg].stars,
+          forks: statsByPkg[pkg].forks,
+        };
+      }
+    }
+    writeFileSync(dailyFile, JSON.stringify(existing, null, 2) + '\n');
+  }
+
+  console.error(`[backfill] Merged new packages into ${existingFiles.length} daily files`);
+}
+
 // --- Main ---
 
 async function main() {
@@ -135,7 +185,12 @@ async function main() {
 
   mkdirSync(DAILY_DIR, { recursive: true });
 
-  const packages = await getPackages();
+  const { packages, newPackages } = await getPackages();
+
+  // Backfill new packages into all existing daily files
+  if (newPackages.length > 0) {
+    await backfillNewPackages(newPackages);
+  }
 
   // Repair previous day if it was all zeros (NPM API lag)
   const dayBeforeYesterday = new Date(Date.now() - 2 * 86400000).toISOString().slice(0, 10);
