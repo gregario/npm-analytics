@@ -99,11 +99,47 @@ function regenerateIndex() {
   console.error(`[index] Wrote ${files.length} dates to index.json`);
 }
 
+// --- Repair zeros ---
+
+async function repairZeroDay(date, packages) {
+  const dailyFile = join(DAILY_DIR, `${date}.json`);
+  if (!existsSync(dailyFile)) return;
+
+  const existing = JSON.parse(readFileSync(dailyFile, 'utf-8'));
+  const allZero = Object.values(existing.packages).every(p => (p.downloads ?? 0) === 0);
+  if (!allZero) return;
+
+  console.error(`[repair] ${date} has all-zero downloads, re-fetching...`);
+  let repaired = false;
+  for (const pkg of packages) {
+    const downloads = await fetchDownloads(pkg, date);
+    if (downloads > 0) {
+      existing.packages[pkg].downloads = downloads;
+      repaired = true;
+    }
+  }
+
+  if (repaired) {
+    writeFileSync(dailyFile, JSON.stringify(existing, null, 2) + '\n');
+    console.error(`[repair] Updated ${date} with corrected download counts`);
+  } else {
+    console.error(`[repair] ${date} still has zero downloads (may be genuine)`);
+  }
+}
+
 // --- Main ---
 
 async function main() {
   const date = yesterday();
   const dailyFile = join(DAILY_DIR, `${date}.json`);
+
+  mkdirSync(DAILY_DIR, { recursive: true });
+
+  const packages = await getPackages();
+
+  // Repair previous day if it was all zeros (NPM API lag)
+  const dayBeforeYesterday = new Date(Date.now() - 2 * 86400000).toISOString().slice(0, 10);
+  await repairZeroDay(dayBeforeYesterday, packages);
 
   if (existsSync(dailyFile)) {
     console.error(`[collect] ${date}.json already exists, skipping`);
@@ -111,9 +147,6 @@ async function main() {
     return;
   }
 
-  mkdirSync(DAILY_DIR, { recursive: true });
-
-  const packages = await getPackages();
   const result = { date, packages: {} };
 
   for (const pkg of packages) {
