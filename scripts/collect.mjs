@@ -13,8 +13,8 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 
 // --- Helpers ---
 
-function yesterday() {
-  return new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+function twoDaysAgo() {
+  return new Date(Date.now() - 2 * 86400000).toISOString().slice(0, 10);
 }
 
 function today() {
@@ -180,7 +180,7 @@ async function backfillNewPackages(newPackages) {
 // --- Main ---
 
 async function main() {
-  const date = yesterday();
+  const date = twoDaysAgo();
   const dailyFile = join(DAILY_DIR, `${date}.json`);
 
   mkdirSync(DAILY_DIR, { recursive: true });
@@ -192,9 +192,11 @@ async function main() {
     await backfillNewPackages(newPackages);
   }
 
-  // Repair previous day if it was all zeros (NPM API lag)
-  const dayBeforeYesterday = new Date(Date.now() - 2 * 86400000).toISOString().slice(0, 10);
-  await repairZeroDay(dayBeforeYesterday, packages);
+  // Repair recent zero days (NPM API lag safety net)
+  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  const threeDaysAgo = new Date(Date.now() - 3 * 86400000).toISOString().slice(0, 10);
+  await repairZeroDay(yesterday, packages);
+  await repairZeroDay(threeDaysAgo, packages);
 
   if (existsSync(dailyFile)) {
     console.error(`[collect] ${date}.json already exists, skipping`);
