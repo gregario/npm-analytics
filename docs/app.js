@@ -12,6 +12,7 @@ let activeRange = 7;
 let activeAgg = 'daily';
 let activePackages = new Set();
 let showTotal = true;
+let interpolatedDates = new Set(); // dates flagged as interpolated
 
 let chartPackages = null;
 let chartStars = null;
@@ -40,6 +41,9 @@ async function loadData() {
     for (const entry of results) {
       if (!entry) continue;
       allData[entry.date] = entry.packages;
+      if (entry._meta?.interpolated) {
+        interpolatedDates.add(entry.date);
+      }
     }
   }
 
@@ -156,6 +160,17 @@ function chartDefaults() {
     },
     plugins: {
       legend: { labels: { color: '#e6edf3', boxWidth: 12 } },
+      tooltip: {
+        callbacks: {
+          title: (items) => {
+            const label = items[0]?.label;
+            if (label && interpolatedDates.has(label)) {
+              return `${label} (estimated — npm outage)`;
+            }
+            return label;
+          },
+        },
+      },
     },
   };
 }
@@ -165,15 +180,39 @@ function renderPackagesChart() {
   const { labels, groups } = aggregateData(dates, activeAgg);
   const activePkgs = allPackages.filter(p => activePackages.has(p));
 
-  const datasets = activePkgs.map((pkg, i) => ({
-    label: pkg,
-    data: groups.map(g => sumDownloads(g, pkg)),
-    borderColor: COLORS[i % COLORS.length],
-    borderWidth: 2,
-    fill: false,
-    tension: 0.3,
-    pointRadius: 1,
-  }));
+  // Check if a group period contains any interpolated dates
+  const groupInterpolated = groups.map(g => g.some(d => interpolatedDates.has(d)));
+
+  const datasets = activePkgs.map((pkg, i) => {
+    const color = COLORS[i % COLORS.length];
+    return {
+      label: pkg,
+      data: groups.map(g => sumDownloads(g, pkg)),
+      borderColor: color,
+      borderWidth: 2,
+      fill: false,
+      tension: 0.3,
+      pointRadius: 1,
+      segment: {
+        borderDash: ctx => {
+          const nextIdx = ctx.p1DataIndex;
+          const prevIdx = ctx.p0DataIndex;
+          return (groupInterpolated[prevIdx] || groupInterpolated[nextIdx]) ? [5, 3] : undefined;
+        },
+        borderColor: ctx => {
+          const nextIdx = ctx.p1DataIndex;
+          const prevIdx = ctx.p0DataIndex;
+          if (groupInterpolated[prevIdx] || groupInterpolated[nextIdx]) {
+            const r = parseInt(color.slice(1, 3), 16);
+            const g = parseInt(color.slice(3, 5), 16);
+            const b = parseInt(color.slice(5, 7), 16);
+            return `rgba(${r},${g},${b},0.4)`;
+          }
+          return undefined;
+        },
+      },
+    };
+  });
 
   // Total line: sum of all active packages per period
   if (showTotal && activePkgs.length > 0) {
@@ -189,7 +228,18 @@ function renderPackagesChart() {
       fill: false,
       tension: 0.3,
       pointRadius: 0,
-      borderDash: [],
+      segment: {
+        borderDash: ctx => {
+          const nextIdx = ctx.p1DataIndex;
+          const prevIdx = ctx.p0DataIndex;
+          return (groupInterpolated[prevIdx] || groupInterpolated[nextIdx]) ? [5, 3] : undefined;
+        },
+        borderColor: ctx => {
+          const nextIdx = ctx.p1DataIndex;
+          const prevIdx = ctx.p0DataIndex;
+          return (groupInterpolated[prevIdx] || groupInterpolated[nextIdx]) ? 'rgba(255,255,255,0.4)' : undefined;
+        },
+      },
     });
   }
 
