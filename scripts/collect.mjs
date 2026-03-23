@@ -97,6 +97,72 @@ async function isNpmOutage(date) {
   return isOutage;
 }
 
+function interpolateDay(date, packages) {
+  const dailyFiles = readdirSync(DAILY_DIR).filter(f => f.endsWith('.json')).sort();
+  const dateStrs = dailyFiles.map(f => f.replace('.json', ''));
+
+  // Find nearest real day before
+  let beforeDate = null;
+  let beforeData = null;
+  for (let i = dateStrs.length - 1; i >= 0; i--) {
+    if (dateStrs[i] >= date) continue;
+    const file = join(DAILY_DIR, `${dateStrs[i]}.json`);
+    const data = JSON.parse(readFileSync(file, 'utf-8'));
+    if (!data._meta?.interpolated) {
+      beforeDate = dateStrs[i];
+      beforeData = data;
+      break;
+    }
+  }
+
+  // Find nearest real day after
+  let afterDate = null;
+  let afterData = null;
+  for (let i = 0; i < dateStrs.length; i++) {
+    if (dateStrs[i] <= date) continue;
+    const file = join(DAILY_DIR, `${dateStrs[i]}.json`);
+    const data = JSON.parse(readFileSync(file, 'utf-8'));
+    if (!data._meta?.interpolated) {
+      afterDate = dateStrs[i];
+      afterData = data;
+      break;
+    }
+  }
+
+  const result = { date, _meta: {
+    interpolated: true,
+    reason: 'npm_outage',
+    detected: today(),
+    lastChecked: today(),
+    checkCount: 0,
+  }, packages: {} };
+
+  for (const pkg of packages) {
+    const beforeDl = beforeData?.packages?.[pkg]?.downloads ?? 0;
+    const afterDl = afterData?.packages?.[pkg]?.downloads ?? beforeDl;
+
+    let downloads;
+    if (beforeDate && afterDate) {
+      // Linear interpolation
+      const totalDays = (new Date(afterDate) - new Date(beforeDate)) / 86400000;
+      const elapsed = (new Date(date) - new Date(beforeDate)) / 86400000;
+      const ratio = totalDays > 0 ? elapsed / totalDays : 0.5;
+      downloads = Math.round(beforeDl + (afterDl - beforeDl) * ratio);
+    } else {
+      // Edge case: use whichever boundary exists
+      downloads = beforeDl || afterDl;
+    }
+
+    // Stars/forks: use latest known values (not interpolated)
+    const stars = beforeData?.packages?.[pkg]?.stars ?? afterData?.packages?.[pkg]?.stars ?? 0;
+    const forks = beforeData?.packages?.[pkg]?.forks ?? afterData?.packages?.[pkg]?.forks ?? 0;
+
+    result.packages[pkg] = { downloads, stars, forks };
+  }
+
+  return result;
+}
+
 // --- Index Regeneration ---
 
 function regenerateIndex() {
