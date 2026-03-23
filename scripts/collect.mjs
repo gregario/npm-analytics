@@ -295,8 +295,17 @@ async function main() {
     }
   }
 
-  writeFileSync(dailyFile, JSON.stringify(result, null, 2) + '\n');
-  console.error(`[collect] Wrote ${dailyFile}`);
+  // Check for npm outage: all downloads zero + canary confirms
+  const allZero = Object.values(result.packages).every(p => (p.downloads ?? 0) === 0);
+  if (allZero && await isNpmOutage(date)) {
+    console.error(`[outage] Interpolating data for ${date}`);
+    const interpolated = interpolateDay(date, packages);
+    writeFileSync(dailyFile, JSON.stringify(interpolated, null, 2) + '\n');
+    console.error(`[collect] Wrote interpolated ${dailyFile}`);
+  } else {
+    writeFileSync(dailyFile, JSON.stringify(result, null, 2) + '\n');
+    console.error(`[collect] Wrote ${dailyFile}`);
+  }
 
   regenerateIndex();
 }
