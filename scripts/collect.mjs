@@ -150,7 +150,7 @@ function interpolateDay(date, packages) {
       downloads = Math.round(beforeDl + (afterDl - beforeDl) * ratio);
     } else {
       // Edge case: use whichever boundary exists
-      downloads = beforeDl || afterDl;
+      downloads = beforeData ? beforeDl : afterDl;
     }
 
     // Stars/forks: use latest known values (not interpolated)
