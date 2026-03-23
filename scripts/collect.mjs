@@ -86,6 +86,17 @@ async function fetchGitHubStats(pkg) {
   return { stars: data.stargazers_count ?? 0, forks: data.forks_count ?? 0 };
 }
 
+const CANARY_PACKAGE = 'express';
+
+async function isNpmOutage(date) {
+  const downloads = await fetchDownloads(CANARY_PACKAGE, date);
+  const isOutage = downloads === 0;
+  if (isOutage) {
+    console.error(`[outage] Canary package '${CANARY_PACKAGE}' returned 0 for ${date} — npm outage detected`);
+  }
+  return isOutage;
+}
+
 // --- Index Regeneration ---
 
 function regenerateIndex() {
