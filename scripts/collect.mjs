@@ -163,6 +163,55 @@ function interpolateDay(date, packages) {
   return result;
 }
 
+function isRecheckDue(meta) {
+  const now = new Date(today());
+  const last = new Date(meta.lastChecked);
+  const count = meta.checkCount;
+  const daysSinceLastCheck = (now - last) / 86400000;
+
+  if (count < 7) return daysSinceLastCheck >= 1;       // Daily for first week
+  if (count < 11) return daysSinceLastCheck >= 7;      // Weekly for weeks 2-5
+  if (count < 17) return daysSinceLastCheck >= 30;     // Monthly for months 2-6
+  return false;                                         // Stop after ~6 months
+}
+
+async function recheckInterpolatedDays(packages) {
+  const dailyFiles = readdirSync(DAILY_DIR).filter(f => f.endsWith('.json')).sort();
+
+  for (const file of dailyFiles) {
+    const dailyFile = join(DAILY_DIR, file);
+    const data = JSON.parse(readFileSync(dailyFile, 'utf-8'));
+    if (!data._meta?.interpolated) continue;
+
+    if (!isRecheckDue(data._meta)) continue;
+
+    const date = data.date;
+    console.error(`[recheck] Checking if npm backfilled ${date} (check #${data._meta.checkCount + 1})...`);
+
+    const outageStillPresent = await isNpmOutage(date);
+
+    if (!outageStillPresent) {
+      // npm backfilled! Fetch real data
+      console.error(`[recheck] npm backfilled ${date} — fetching real data`);
+      const result = { date, packages: {} };
+      for (const pkg of packages) {
+        const downloads = await fetchDownloads(pkg, date);
+        const { stars, forks } = await fetchGitHubStats(pkg);
+        result.packages[pkg] = { downloads, stars, forks };
+      }
+      writeFileSync(dailyFile, JSON.stringify(result, null, 2) + '\n');
+      console.error(`[recheck] Replaced interpolated data for ${date} with real data`);
+    } else {
+      // Still an outage — update check metadata, re-interpolate with latest boundaries
+      const reinterpolated = interpolateDay(date, packages);
+      reinterpolated._meta.checkCount = data._meta.checkCount + 1;
+      reinterpolated._meta.detected = data._meta.detected;
+      writeFileSync(dailyFile, JSON.stringify(reinterpolated, null, 2) + '\n');
+      console.error(`[recheck] ${date} still not backfilled (check #${reinterpolated._meta.checkCount})`);
+    }
+  }
+}
+
 // --- Index Regeneration ---
 
 function regenerateIndex() {
@@ -274,6 +323,9 @@ async function main() {
   const threeDaysAgo = new Date(Date.now() - 3 * 86400000).toISOString().slice(0, 10);
   await repairZeroDay(yesterday, packages);
   await repairZeroDay(threeDaysAgo, packages);
+
+  // Progressive recheck of interpolated days
+  await recheckInterpolatedDays(packages);
 
   if (existsSync(dailyFile)) {
     console.error(`[collect] ${date}.json already exists, skipping`);
