@@ -143,7 +143,7 @@ function renderCards() {
 
 // --- Charts ---
 
-function chartDefaults() {
+function chartDefaults(groupInterpolated = []) {
   return {
     responsive: true,
     interaction: { mode: 'index', intersect: false },
@@ -163,8 +163,9 @@ function chartDefaults() {
       tooltip: {
         callbacks: {
           title: (items) => {
+            const idx = items[0]?.dataIndex;
             const label = items[0]?.label;
-            if (label && interpolatedDates.has(label)) {
+            if (idx != null && groupInterpolated[idx]) {
               return `${label} (estimated — npm outage)`;
             }
             return label;
@@ -248,7 +249,7 @@ function renderPackagesChart() {
   chartPackages = new Chart(ctx, {
     type: 'line',
     data: { labels, datasets },
-    options: chartDefaults(),
+    options: chartDefaults(groupInterpolated),
   });
 }
 
@@ -256,6 +257,7 @@ function renderStarsChart() {
   const dates = filterDates(allDates, activeRange);
   const { labels, groups } = aggregateData(dates, activeAgg);
   const activePkgs = allPackages.filter(p => activePackages.has(p));
+  const groupInterpolated = groups.map(g => g.some(d => interpolatedDates.has(d)));
 
   const starsDatasets = activePkgs.map((pkg, i) => ({
     label: `${pkg} stars`,
@@ -283,7 +285,7 @@ function renderStarsChart() {
   chartStars = new Chart(ctx, {
     type: 'line',
     data: { labels, datasets: [...starsDatasets, ...forksDatasets] },
-    options: chartDefaults(),
+    options: chartDefaults(groupInterpolated),
   });
 }
 
