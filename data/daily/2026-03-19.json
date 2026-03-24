@@ -1,70 +1,63 @@
 {
   "date": "2026-03-19",
-  "_meta": {
-    "interpolated": true,
-    "reason": "npm_outage",
-    "detected": "2026-03-23",
-    "lastChecked": "2026-03-23",
-    "checkCount": 0
-  },
   "packages": {
     "warhammer-oracle": {
-      "downloads": 165,
-      "stars": 2,
+      "downloads": 123,
+      "stars": 3,
       "forks": 1
     },
     "godot-forge": {
-      "downloads": 27,
-      "stars": 1,
+      "downloads": 10,
+      "stars": 2,
       "forks": 1
     },
     "mtg-oracle": {
-      "downloads": 29,
-      "stars": 1,
-      "forks": 1
-    },
-    "brewers-almanack": {
-      "downloads": 26,
+      "downloads": 8,
       "stars": 1,
       "forks": 1
     },
     "lego-oracle": {
-      "downloads": 31,
+      "downloads": 7,
       "stars": 0,
       "forks": 1
     },
+    "brewers-almanack": {
+      "downloads": 7,
+      "stars": 1,
+      "forks": 1
+    },
     "astronomy-oracle": {
-      "downloads": 22,
+      "downloads": 4,
+      "stars": 0,
+      "forks": 1
+    },
+    "3dprint-oracle": {
+      "downloads": 5,
+      "stars": 0,
+      "forks": 1
+    },
+    "onepiece-oracle": {
+      "downloads": 5,
+      "stars": 0,
+      "forks": 1
+    },
+    "dnd-oracle": {
+      "downloads": 6,
+      "stars": 0,
+      "forks": 1
+    },
+    "lorcana-oracle": {
+      "downloads": 3,
+      "stars": 0,
+      "forks": 1
+    },
+    "hearthstone-oracle": {
+      "downloads": 3,
       "stars": 0,
       "forks": 1
     },
     "tft-oracle": {
       "downloads": 5,
-      "stars": 0,
-      "forks": 1
-    },
-    "lorcana-oracle": {
-      "downloads": 16,
-      "stars": 0,
-      "forks": 1
-    },
-    "3dprint-oracle": {
-      "downloads": 20,
-      "stars": 0,
-      "forks": 1
-    },
-    "onepiece-oracle": {
-      "downloads": 18,
-      "stars": 0,
-      "forks": 1
-    },
-    "hearthstone-oracle": {
-      "downloads": 15,
-      "stars": 0,
-      "forks": 1
-    },
-    "dnd-oracle": {
-      "downloads": 18,
       "stars": 0,
       "forks": 1
     }
