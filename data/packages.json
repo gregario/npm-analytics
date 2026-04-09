@@ -1,5 +1,5 @@
 {
-  "last_discovered": "2026-04-08",
+  "last_discovered": "2026-04-09",
   "packages": [
     "warhammer-oracle",
     "the-rouge",
@@ -9,9 +9,9 @@
     "brewers-almanack",
     "astronomy-oracle",
     "lorcana-oracle",
-    "hearthstone-oracle",
     "onepiece-oracle",
     "tft-oracle",
+    "hearthstone-oracle",
     "3dprint-oracle",
     "dnd-oracle"
   ]
