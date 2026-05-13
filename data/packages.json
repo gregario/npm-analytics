@@ -1,10 +1,10 @@
 {
-  "last_discovered": "2026-05-12",
+  "last_discovered": "2026-05-13",
   "packages": [
     "warhammer-oracle",
     "the-rouge",
-    "dnd-oracle",
     "godot-forge",
+    "dnd-oracle",
     "lorcana-oracle",
     "3dprint-oracle",
     "brewers-almanack",
