@@ -1,0 +1,42 @@
+name: Collect Ecosystem Stats
+
+on:
+  schedule:
+    # Every Sunday at 06:00 UTC — runs before micro-works-synthesize at 08:00 UTC Sunday
+    - cron: "0 6 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect-ecosystem:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Collect ecosystem stats
+        run: node scripts/collect-ecosystem.mjs
+
+      - name: Check for new data
+        id: diff
+        run: |
+          git add data/ecosystem/
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: collect ecosystem stats ($(date -u +%Y-%m-%d))"
+          git pull --rebase
+          git push

@@ -3,66 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Package Analytics</title>
+  <title>npm Analytics</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
-    <h1>Package Analytics</h1>
-    <p class="subtitle">npm downloads, GitHub stars, and forks for <a href="https://github.com/gregario" target="_blank">gregario</a> packages</p>
+    <h1>npm Analytics</h1>
+    <p class="subtitle">packages by <a href="https://github.com/gregario" target="_blank">gregario</a> · ecosystem market signals</p>
   </header>
 
-  <div class="cards" id="cards">
-    <div class="card">
-      <div class="card-label">Total Downloads</div>
-      <div class="card-value" id="total-downloads">--</div>
+  <!-- Tab navigation -->
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="me">Me</button>
+    <button class="tab-btn" data-tab="market">Market</button>
+  </nav>
+
+  <!-- ===================== ME TAB ===================== -->
+  <div id="tab-me" class="tab-panel active">
+    <div class="cards" id="cards">
+      <div class="card">
+        <div class="card-label">Total Downloads</div>
+        <div class="card-value" id="total-downloads">--</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Stars</div>
+        <div class="card-value" id="total-stars">--</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Forks</div>
+        <div class="card-value" id="total-forks">--</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Packages</div>
+        <div class="card-value" id="package-count">--</div>
+      </div>
     </div>
-    <div class="card">
-      <div class="card-label">Stars</div>
-      <div class="card-value" id="total-stars">--</div>
+
+    <div class="controls">
+      <div class="control-group">
+        <span class="control-label">Range:</span>
+        <button class="range-btn active" data-range="7">7d</button>
+        <button class="range-btn" data-range="30">30d</button>
+        <button class="range-btn" data-range="90">90d</button>
+        <button class="range-btn" data-range="all">All</button>
+      </div>
+      <div class="control-group">
+        <span class="control-label">Aggregation:</span>
+        <button class="agg-btn active" data-agg="daily">Daily</button>
+        <button class="agg-btn" data-agg="weekly">Weekly</button>
+        <button class="agg-btn" data-agg="monthly">Monthly</button>
+      </div>
+      <div class="control-group" id="package-filters">
+        <span class="control-label">Packages:</span>
+      </div>
     </div>
-    <div class="card">
-      <div class="card-label">Forks</div>
-      <div class="card-value" id="total-forks">--</div>
+
+    <div class="chart-container">
+      <h2>Downloads</h2>
+      <canvas id="chart-packages"></canvas>
     </div>
-    <div class="card">
-      <div class="card-label">Packages</div>
-      <div class="card-value" id="package-count">--</div>
+
+    <div class="chart-container">
+      <h2>Stars &amp; Forks</h2>
+      <canvas id="chart-stars"></canvas>
     </div>
   </div>
 
-  <div class="controls">
-    <div class="control-group">
-      <span class="control-label">Range:</span>
-      <button class="range-btn active" data-range="7">7d</button>
-      <button class="range-btn" data-range="30">30d</button>
-      <button class="range-btn" data-range="90">90d</button>
-      <button class="range-btn" data-range="all">All</button>
+  <!-- ===================== MARKET TAB ===================== -->
+  <div id="tab-market" class="tab-panel hidden">
+    <div class="market-header">
+      <p class="market-meta" id="market-meta">Loading ecosystem data…</p>
     </div>
-    <div class="control-group">
-      <span class="control-label">Aggregation:</span>
-      <button class="agg-btn active" data-agg="daily">Daily</button>
-      <button class="agg-btn" data-agg="weekly">Weekly</button>
-      <button class="agg-btn" data-agg="monthly">Monthly</button>
-    </div>
-    <div class="control-group" id="package-filters">
-      <span class="control-label">Packages:</span>
-    </div>
-  </div>
 
-  <div class="chart-container">
-    <h2>Downloads</h2>
-    <canvas id="chart-packages"></canvas>
-  </div>
+    <div class="market-sections">
+      <!-- Top by downloads -->
+      <section class="market-section">
+        <h2>🚀 Top by Downloads <span class="section-sub">new packages, last 60 days</span></h2>
+        <div class="pkg-table-wrap">
+          <table class="pkg-table" id="table-top-downloads">
+            <thead>
+              <tr>
+                <th>Package</th>
+                <th>Description</th>
+                <th class="num">This Week</th>
+                <th class="num">Prev Week</th>
+                <th class="num">Growth</th>
+                <th>Published</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
 
-  <div class="chart-container">
-    <h2>Stars &amp; Forks</h2>
-    <canvas id="chart-stars"></canvas>
+      <!-- Top by growth -->
+      <section class="market-section">
+        <h2>📈 Fastest Growing <span class="section-sub">week-over-week velocity</span></h2>
+        <div class="pkg-table-wrap">
+          <table class="pkg-table" id="table-top-growth">
+            <thead>
+              <tr>
+                <th>Package</th>
+                <th>Description</th>
+                <th class="num">This Week</th>
+                <th class="num">Growth</th>
+                <th>Published</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Brand new -->
+      <section class="market-section">
+        <h2>✨ Brand New <span class="section-sub">first week tracked, no prior baseline</span></h2>
+        <div class="pkg-table-wrap">
+          <table class="pkg-table" id="table-brand-new">
+            <thead>
+              <tr>
+                <th>Package</th>
+                <th>Description</th>
+                <th class="num">This Week</th>
+                <th>Published</th>
+                <th>Category</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
   </div>
 
   <footer>
-    <p>Data collected daily via GitHub Actions. <a href="https://github.com/gregario/npm-analytics" target="_blank">Source</a></p>
+    <p>
+      Data from <a href="https://registry.npmjs.org" target="_blank">npm registry</a>
+      · <a href="https://github.com/gregario/npm-analytics" target="_blank">source</a>
+      · updated daily (me) / weekly (market)
+    </p>
   </footer>
 
   <script src="app.js"></script>
