@@ -374,8 +374,11 @@ function renderTable(tableId, rows, columns) {
 function renderMarket() {
   const d = ecosystemData;
   const meta = document.getElementById('market-meta');
-  meta.innerHTML = `Week <strong>${d.week}</strong> · ${d.total_packages_tracked} new packages tracked ·
-    downloads window: <code>${d.this_week_range}</code> vs <code>${d.prev_week_range}</code> ·
+  const failNote = (d.packages_fetch_failed > 0)
+    ? ` · <span class="warn-note" title="API rate limits prevented download counts for these packages">⚠ ${d.packages_fetch_failed} fetch-failed</span>`
+    : '';
+  meta.innerHTML = `Week <strong>${d.week}</strong> · ${d.packages_found ?? d.total_packages_tracked} found · ${d.total_packages_tracked} qualified${failNote} ·
+    window: <code>${d.this_week_range}</code> vs <code>${d.prev_week_range}</code> ·
     generated ${new Date(d.generated).toLocaleDateString()}`;
 
   // Top by downloads

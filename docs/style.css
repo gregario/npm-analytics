@@ -381,6 +381,11 @@ canvas {
   border: 1px solid rgba(210,153,34,0.3);
 }
 
+.warn-note {
+  color: #e3b341;
+  font-size: 0.85rem;
+}
+
 .badge-down {
   background: rgba(248,81,73,0.1);
   color: var(--red);
