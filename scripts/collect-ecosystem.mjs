@@ -78,12 +78,19 @@ function isoWeek(date = new Date()) {
 }
 
 function dateRange(offsetWeeks = 0) {
-  // Returns YYYY-MM-DD:YYYY-MM-DD for the Mon–Sun of a given week offset from last complete week
+  // Returns YYYY-MM-DD:YYYY-MM-DD for a complete Mon–Sun week.
+  // offsetWeeks=0 → last fully completed week
+  // offsetWeeks=-1 → the week before that
+  // "Last complete week" = the Mon–Sun block that ended before today's Monday.
+  // When run on Sunday the current week is still in progress, so we go back
+  // an extra 7 days to ensure we always land on a completed week.
   const now = new Date();
-  const day = now.getUTCDay() || 7;
-  // Start of last complete week (Monday)
+  const day = now.getUTCDay() || 7; // 1=Mon … 7=Sun
+  // Days since last Monday (0 if today is Monday)
+  const daysSinceMon = day - 1;
+  // Monday of the last *complete* week
   const lastMon = new Date(now);
-  lastMon.setUTCDate(now.getUTCDate() - day - 7 * (-offsetWeeks) + 1);
+  lastMon.setUTCDate(now.getUTCDate() - daysSinceMon - 7 + (offsetWeeks * 7));
   const lastSun = new Date(lastMon);
   lastSun.setUTCDate(lastMon.getUTCDate() + 6);
   const fmt = d => d.toISOString().slice(0, 10);
