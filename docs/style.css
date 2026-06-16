@@ -24,7 +24,7 @@ body {
   color: var(--text);
   line-height: 1.5;
   padding: 2rem;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -265,18 +265,19 @@ canvas {
 .pkg-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
 }
 
 .pkg-table th {
   text-align: left;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.75rem;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   border-bottom: 1px solid var(--border);
+  white-space: nowrap;
 }
 
 .pkg-table th.num {
@@ -284,7 +285,7 @@ canvas {
 }
 
 .pkg-table td {
-  padding: 0.55rem 0.75rem;
+  padding: 0.5rem 0.6rem;
   border-bottom: 1px solid #21262d;
   vertical-align: top;
 }
@@ -321,7 +322,7 @@ canvas {
 .desc {
   color: var(--text-muted);
   font-size: 0.8rem;
-  max-width: 320px;
+  max-width: 220px;
   display: block;
 }
 
@@ -329,7 +330,6 @@ canvas {
   text-align: right;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
-  display: block;
 }
 
 .muted {

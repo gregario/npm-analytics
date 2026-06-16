@@ -455,19 +455,26 @@ function setupTabs() {
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const target = btn.dataset.tab;
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelectorAll('.tab-panel').forEach(p => {
-        p.classList.toggle('active', p.id === `tab-${target}`);
-        p.classList.toggle('hidden', p.id !== `tab-${target}`);
-      });
-      // Lazy-load ecosystem data on first visit to market tab
-      if (target === 'market' && !marketLoaded) {
-        marketLoaded = true;
-        loadEcosystem();
-      }
+      activateTab(target);
+      // Update URL hash without triggering a scroll
+      history.replaceState(null, '', `#${target}`);
     });
   });
+}
+
+function activateTab(target) {
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.tab === target);
+  });
+  document.querySelectorAll('.tab-panel').forEach(p => {
+    p.classList.toggle('active', p.id === `tab-${target}`);
+    p.classList.toggle('hidden', p.id !== `tab-${target}`);
+  });
+  // Lazy-load ecosystem data on first visit to market tab
+  if (target === 'market' && !marketLoaded) {
+    marketLoaded = true;
+    loadEcosystem();
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -476,6 +483,12 @@ function setupTabs() {
 
 async function init() {
   setupTabs();
+
+  // Honour URL hash on load (e.g. #market to link directly to the Market tab)
+  const initialTab = window.location.hash.replace('#', '') || 'me';
+  const validTabs = ['me', 'market'];
+  activateTab(validTabs.includes(initialTab) ? initialTab : 'me');
+
   try {
     await loadData();
     setupControls();
