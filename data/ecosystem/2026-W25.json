@@ -1,11 +1,11 @@
 {
   "week": "2026-W25",
-  "generated": "2026-06-15T18:27:17.913Z",
+  "generated": "2026-06-16T10:05:39.326Z",
   "this_week_range": "2026-06-08:2026-06-14",
   "prev_week_range": "2026-06-01:2026-06-07",
-  "packages_found": 165,
-  "total_packages_tracked": 146,
-  "packages_fetch_failed": 6,
+  "packages_found": 164,
+  "total_packages_tracked": 148,
+  "packages_fetch_failed": 4,
   "categories": {
     "mcp": [
       {
@@ -15,9 +15,13 @@
         "repo": "git+https://github.com/microsoft/playwright-mcp.git",
         "keyword": "mcp",
         "this_week": 6272314,
-        "prev_week": null,
-        "growth_pct": null,
-        "fetch_failed": false
+        "prev_week": 4473748,
+        "growth_pct": 40,
+        "fetch_failed": false,
+        "gh_stars": 33979,
+        "days_since_publish": 6,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "chrome-devtools-mcp",
@@ -28,18 +32,11 @@
         "this_week": 2996115,
         "prev_week": 1545227,
         "growth_pct": 94,
-        "fetch_failed": false
-      },
-      {
-        "name": "@modelcontextprotocol/ext-apps",
-        "description": "MCP Apps SDK — Enable MCP servers to display interactive user interfaces in conversational clients.",
-        "date": "2026-06-05",
-        "repo": "git+https://github.com/modelcontextprotocol/ext-apps.git",
-        "keyword": "mcp",
-        "this_week": 1748819,
-        "prev_week": 1404597,
-        "growth_pct": 25,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 43735,
+        "days_since_publish": 8,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "mcp-proxy",
@@ -50,7 +47,11 @@
         "this_week": 1600004,
         "prev_week": 1151266,
         "growth_pct": 39,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 264,
+        "days_since_publish": 27,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@upstash/context7-mcp",
@@ -61,7 +62,11 @@
         "this_week": 1259598,
         "prev_week": 1071217,
         "growth_pct": 18,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 57470,
+        "days_since_publish": 3,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/mcp",
@@ -72,7 +77,11 @@
         "this_week": 1024738,
         "prev_week": 742061,
         "growth_pct": 38,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 2,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@mcp-ui/client",
@@ -83,7 +92,11 @@
         "this_week": 287192,
         "prev_week": 225429,
         "growth_pct": 27,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 38,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@hono/mcp",
@@ -94,7 +107,11 @@
         "this_week": 194748,
         "prev_week": 184663,
         "growth_pct": 5,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 31,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@supabase/mcp-utils",
@@ -105,7 +122,26 @@
         "this_week": 150892,
         "prev_week": 59164,
         "growth_pct": 155,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 8,
+        "quality_score": null,
+        "growth_streak": 0
+      },
+      {
+        "name": "add-mcp",
+        "description": "Add MCP servers to your favorite coding agents with a single command.",
+        "date": "2026-05-23",
+        "repo": "git+https://github.com/neon-solutions/add-mcp.git",
+        "keyword": "mcp",
+        "this_week": 143560,
+        "prev_week": 109013,
+        "growth_pct": 32,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 24,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@azure/mcp",
@@ -116,29 +152,26 @@
         "this_week": 136095,
         "prev_week": 102610,
         "growth_pct": 33,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
-        "name": "@ui5/mcp-server",
-        "description": "MCP server for SAPUI5/OpenUI5 development",
-        "date": "2026-06-02",
-        "repo": "git+https://github.com/UI5/mcp-server.git",
+        "name": "@sap-ux/fiori-mcp-server",
+        "description": "SAP Fiori - Model Context Protocol (MCP) server",
+        "date": "2026-06-12",
+        "repo": "https://github.com/SAP/open-ux-tools.git",
         "keyword": "mcp",
-        "this_week": 113032,
-        "prev_week": 101908,
-        "growth_pct": 11,
-        "fetch_failed": false
-      },
-      {
-        "name": "@github/computer-use-mcp",
-        "description": "Computer Use MCP Server",
-        "date": "2026-06-10",
-        "repo": "git+https://github.com/github/computer-use.git",
-        "keyword": "mcp",
-        "this_week": 72918,
-        "prev_week": 23149,
-        "growth_pct": 215,
-        "fetch_failed": false
+        "this_week": 118783,
+        "prev_week": 86459,
+        "growth_pct": 37,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@penpot/mcp",
@@ -149,18 +182,11 @@
         "this_week": 62883,
         "prev_week": 53784,
         "growth_pct": 17,
-        "fetch_failed": false
-      },
-      {
-        "name": "@traceloop/instrumentation-mcp",
-        "description": "MCP (Model Context Protocol) Instrumentation",
-        "date": "2026-06-01",
-        "repo": "git+https://github.com/traceloop/openllmetry-js.git",
-        "keyword": "mcp",
-        "this_week": 47671,
-        "prev_week": 27132,
-        "growth_pct": 76,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 14,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@mcp-use/inspector",
@@ -171,53 +197,88 @@
         "this_week": 41485,
         "prev_week": 31095,
         "growth_pct": 33,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 5,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
-        "name": "@aikidosec/mcp",
-        "description": "Aikido MCP server",
+        "name": "hostinger-api-mcp",
+        "description": "MCP server for Hostinger API",
         "date": "2026-06-11",
-        "repo": "",
+        "repo": "git+https://github.com/hostinger/api-mcp-server.git",
         "keyword": "mcp",
-        "this_week": 23082,
-        "prev_week": 10787,
-        "growth_pct": 114,
-        "fetch_failed": false
+        "this_week": 28917,
+        "prev_week": 10437,
+        "growth_pct": 177,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 5,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
-        "name": "@agentmemory/mcp",
-        "description": "Standalone MCP server for agentmemory — thin shim that re-exposes @agentmemory/agentmemory's MCP entrypoint",
-        "date": "2026-06-07",
-        "repo": "git+https://github.com/rohitg00/agentmemory.git",
+        "name": "@eslint/mcp",
+        "description": "MCP server for ESLint",
+        "date": "2026-06-12",
+        "repo": "git+https://github.com/eslint/rewrite.git",
         "keyword": "mcp",
-        "this_week": 15836,
-        "prev_week": 33713,
-        "growth_pct": -53,
-        "fetch_failed": false
+        "this_week": 20654,
+        "prev_week": 12600,
+        "growth_pct": 64,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
-        "name": "argocd-mcp",
-        "description": "Argo CD MCP Server",
-        "date": "2026-06-11",
-        "repo": "git+https://github.com/argoproj-labs/mcp-for-argocd.git",
+        "name": "@mobilenext/mobile-mcp",
+        "description": "Mobile MCP",
+        "date": "2026-06-15",
+        "repo": "git+https://github.com/mobile-next/mobile-mcp.git",
         "keyword": "mcp",
-        "this_week": 13183,
-        "prev_week": 10498,
-        "growth_pct": 26,
-        "fetch_failed": false
+        "this_week": 20489,
+        "prev_week": 15942,
+        "growth_pct": 29,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
+      },
+      {
+        "name": "mcp-searxng",
+        "description": "MCP server for SearXNG integration",
+        "date": "2026-06-12",
+        "repo": "git+https://github.com/ihor-sokoliuk/mcp-searxng.git",
+        "keyword": "mcp",
+        "this_week": 19441,
+        "prev_week": 9448,
+        "growth_pct": 106,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       }
     ],
     "ai sdk": [
       {
         "name": "@ai-sdk/gateway",
         "description": "The Gateway provider for the [AI SDK](https://ai-sdk.dev/docs) allows the use of a wide variety of AI models and provide",
-        "date": "2026-06-14",
+        "date": "2026-06-15",
         "repo": "git+https://github.com/vercel/ai.git",
         "keyword": "ai sdk",
         "this_week": 13520307,
         "prev_week": 10758328,
         "growth_pct": 26,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/openai",
@@ -228,7 +289,11 @@
         "this_week": 7657463,
         "prev_week": 5936406,
         "growth_pct": 29,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/anthropic",
@@ -239,18 +304,26 @@
         "this_week": 7150221,
         "prev_week": 5746556,
         "growth_pct": 24,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/react",
         "description": "[React](https://react.dev/) UI components for the [AI SDK](https://ai-sdk.dev/docs):",
-        "date": "2026-06-14",
+        "date": "2026-06-15",
         "repo": "git+https://github.com/vercel/ai.git",
         "keyword": "ai sdk",
         "this_week": 5880856,
         "prev_week": 4739468,
         "growth_pct": 24,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@firebase/ai",
@@ -261,7 +334,11 @@
         "this_week": 5535860,
         "prev_week": 4367164,
         "growth_pct": 27,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 5125,
+        "days_since_publish": 19,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/google",
@@ -272,7 +349,11 @@
         "this_week": 5203392,
         "prev_week": 4027225,
         "growth_pct": 29,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/google-vertex",
@@ -283,7 +364,11 @@
         "this_week": 2076334,
         "prev_week": 1668559,
         "growth_pct": 24,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/amazon-bedrock",
@@ -294,7 +379,11 @@
         "this_week": 2065604,
         "prev_week": 1608430,
         "growth_pct": 28,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/xai",
@@ -305,7 +394,11 @@
         "this_week": 1770736,
         "prev_week": 1641467,
         "growth_pct": 8,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/azure",
@@ -316,7 +409,11 @@
         "this_week": 1665380,
         "prev_week": 1274849,
         "growth_pct": 31,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/groq",
@@ -327,7 +424,11 @@
         "this_week": 1351157,
         "prev_week": 1127383,
         "growth_pct": 20,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/mistral",
@@ -338,7 +439,11 @@
         "this_week": 1261141,
         "prev_week": 1020256,
         "growth_pct": 24,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/deepseek",
@@ -349,7 +454,11 @@
         "this_week": 1070443,
         "prev_week": 825284,
         "growth_pct": 30,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/perplexity",
@@ -360,18 +469,26 @@
         "this_week": 861560,
         "prev_week": 833381,
         "growth_pct": 3,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/vue",
         "description": "[Vue.js](https://vuejs.org/) UI components for the [AI SDK](https://ai-sdk.dev/docs):",
-        "date": "2026-06-14",
+        "date": "2026-06-15",
         "repo": "git+https://github.com/vercel/ai.git",
         "keyword": "ai sdk",
         "this_week": 841711,
         "prev_week": 629045,
         "growth_pct": 34,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/togetherai",
@@ -382,7 +499,11 @@
         "this_week": 650496,
         "prev_week": 615705,
         "growth_pct": 6,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/cohere",
@@ -393,29 +514,41 @@
         "this_week": 472706,
         "prev_week": 390169,
         "growth_pct": 21,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/svelte",
         "description": "[Svelte](https://svelte.dev/) UI components for the [AI SDK](https://ai-sdk.dev/docs):",
-        "date": "2026-06-14",
+        "date": "2026-06-15",
         "repo": "git+https://github.com/vercel/ai.git",
         "keyword": "ai sdk",
         "this_week": 411316,
         "prev_week": 333249,
         "growth_pct": 23,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@assistant-ui/react-ai-sdk",
         "description": "Vercel AI SDK adapter for assistant-ui",
-        "date": "2026-06-14",
+        "date": "2026-06-15",
         "repo": "git+https://github.com/assistant-ui/assistant-ui.git",
         "keyword": "ai sdk",
         "this_week": 276350,
         "prev_week": 208070,
         "growth_pct": 33,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 10643,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/fireworks",
@@ -426,7 +559,11 @@
         "this_week": 275080,
         "prev_week": 207728,
         "growth_pct": 32,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@mastra/ai-sdk",
@@ -437,7 +574,11 @@
         "this_week": 210796,
         "prev_week": 187380,
         "growth_pct": 12,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 25125,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "ai-sdk-provider-opencode-sdk",
@@ -448,18 +589,26 @@
         "this_week": 74795,
         "prev_week": 75267,
         "growth_pct": -1,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 5,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/langchain",
         "description": "The **[AI SDK](https://ai-sdk.dev)** LangChain adapter provides seamless integration between [LangChain](https://langcha",
-        "date": "2026-06-14",
+        "date": "2026-06-15",
         "repo": "git+https://github.com/vercel/ai.git",
         "keyword": "ai sdk",
         "this_week": 67767,
         "prev_week": 99520,
         "growth_pct": -32,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       }
     ],
     "llm": [
@@ -472,18 +621,11 @@
         "this_week": 2430603,
         "prev_week": 1524782,
         "growth_pct": 59,
-        "fetch_failed": false
-      },
-      {
-        "name": "@toon-format/toon",
-        "description": "Token-Oriented Object Notation (TOON) – Compact, human-readable, schema-aware encoding of JSON for LLM prompts",
-        "date": "2026-05-20",
-        "repo": "git+https://github.com/toon-format/toon.git",
-        "keyword": "llm",
-        "this_week": 828497,
-        "prev_week": 700191,
-        "growth_pct": 18,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 63118,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "promptfoo",
@@ -494,7 +636,11 @@
         "this_week": 326899,
         "prev_week": 243252,
         "growth_pct": 34,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 22262,
+        "days_since_publish": 11,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@arizeai/openinference-semantic-conventions",
@@ -505,7 +651,11 @@
         "this_week": 278373,
         "prev_week": 224151,
         "growth_pct": 24,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 1028,
+        "days_since_publish": 18,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@lobehub/icons",
@@ -516,7 +666,11 @@
         "this_week": 201813,
         "prev_week": 160812,
         "growth_pct": 25,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 2119,
+        "days_since_publish": 19,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@mastra/datadog",
@@ -527,7 +681,11 @@
         "this_week": 103953,
         "prev_week": 39845,
         "growth_pct": 161,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 25125,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@empiricalrun/llm",
@@ -536,20 +694,28 @@
         "repo": "git+https://github.com/empirical-run/empirical.git",
         "keyword": "llm",
         "this_week": 15918,
-        "prev_week": null,
-        "growth_pct": null,
-        "fetch_failed": false
+        "prev_week": 16750,
+        "growth_pct": -5,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 32,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@capgo/capacitor-llm",
         "description": "Adds support for LLM locally runned for Capacitor",
-        "date": "2026-05-11",
+        "date": "2026-06-16",
         "repo": "git+https://github.com/Cap-go/capacitor-llm.git",
         "keyword": "llm",
         "this_week": 4734,
         "prev_week": 2728,
         "growth_pct": 74,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 0,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@rocketnew/llm-sdk",
@@ -560,7 +726,11 @@
         "this_week": 3771,
         "prev_week": 5183,
         "growth_pct": -27,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 43,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@outputai/llm",
@@ -571,7 +741,11 @@
         "this_week": 3171,
         "prev_week": 1801,
         "growth_pct": 76,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 6,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@mcp-abap-adt/openai-llm",
@@ -582,7 +756,26 @@
         "this_week": 817,
         "prev_week": 880,
         "growth_pct": -7,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 6,
+        "quality_score": null,
+        "growth_streak": 0
+      },
+      {
+        "name": "@llm-ports/core",
+        "description": "Provider-agnostic LLM port interface, registry, cost gating, content blocks, validation strategies. The foundation of ll",
+        "date": "2026-06-15",
+        "repo": "git+https://github.com/baabakk/llm-ports.git",
+        "keyword": "llm",
+        "this_week": 728,
+        "prev_week": 516,
+        "growth_pct": 41,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@forge/llm",
@@ -593,21 +786,14 @@
         "this_week": 586,
         "prev_week": 562,
         "growth_pct": 4,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 5,
+        "quality_score": null,
+        "growth_streak": 0
       }
     ],
     "ai agent": [
-      {
-        "name": "@vercel/detect-agent",
-        "description": "Detect if code is running in an AI agent or automated development environment",
-        "date": "2026-04-17",
-        "repo": "git+https://github.com/vercel/vercel.git",
-        "keyword": "ai agent",
-        "this_week": 1971464,
-        "prev_week": 2290899,
-        "growth_pct": -14,
-        "fetch_failed": false
-      },
       {
         "name": "rosie-skills",
         "description": "A fast, cross-platform package manager for AI agent skills",
@@ -617,7 +803,11 @@
         "this_week": 661151,
         "prev_week": 1036638,
         "growth_pct": -36,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 140,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "oci-generativeaiagentruntime",
@@ -628,7 +818,11 @@
         "this_week": 98971,
         "prev_week": 88682,
         "growth_pct": 12,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 7,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "oci-generativeaiagent",
@@ -639,7 +833,11 @@
         "this_week": 98967,
         "prev_week": 58509,
         "growth_pct": 69,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 7,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "paperclipai",
@@ -648,42 +846,43 @@
         "repo": "git+https://github.com/paperclipai/paperclip.git",
         "keyword": "ai agent",
         "this_week": 31520,
-        "prev_week": 22654,
-        "growth_pct": 39,
-        "fetch_failed": false
+        "prev_week": null,
+        "growth_pct": null,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 7,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
-        "name": "@miller-tech/uap",
-        "description": "Autonomous AI agent memory system with CLAUDE.md protocol enforcement",
-        "date": "2026-06-15",
-        "repo": "git+https://github.com/DammianMiller/universal-agent-protocol.git",
+        "name": "@voltagent/core",
+        "description": "VoltAgent Core - AI agent framework for JavaScript",
+        "date": "2026-06-08",
+        "repo": "git+https://github.com/VoltAgent/voltagent.git",
         "keyword": "ai agent",
-        "this_week": 12256,
-        "prev_week": 7406,
-        "growth_pct": 65,
-        "fetch_failed": false
+        "this_week": 9257,
+        "prev_week": 8671,
+        "growth_pct": 7,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 8,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@auto-ai/agent",
         "description": "Auto AI Agent 网关 CLI（WebSocket，独立二进制，无需 Bun）",
-        "date": "2026-06-15",
+        "date": "2026-06-16",
         "repo": "git+https://github.com/auto-ai-z/agent.git",
         "keyword": "ai agent",
         "this_week": 6097,
         "prev_week": 4699,
         "growth_pct": 30,
-        "fetch_failed": false
-      },
-      {
-        "name": "@grackle-ai/powerline",
-        "description": "gRPC PowerLine server for Grackle AI agent integration",
-        "date": "2026-06-12",
-        "repo": "git+https://github.com/nick-pape/grackle.git",
-        "keyword": "ai agent",
-        "this_week": 3767,
-        "prev_week": 4837,
-        "growth_pct": -22,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 0,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@sendbird/ai-agent-messenger-react",
@@ -694,7 +893,11 @@
         "this_week": 3210,
         "prev_week": 2284,
         "growth_pct": 41,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 6,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "ai-agent-quest-sdk",
@@ -703,9 +906,13 @@
         "repo": "",
         "keyword": "ai agent",
         "this_week": 2631,
-        "prev_week": 1656,
-        "growth_pct": 59,
-        "fetch_failed": false
+        "prev_week": null,
+        "growth_pct": null,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 17,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@cryptoflops/ai-agent-quest-utils",
@@ -716,40 +923,56 @@
         "this_week": 2356,
         "prev_week": 2931,
         "growth_pct": -20,
-        "fetch_failed": false
-      },
-      {
-        "name": "nsauditor-ai-agent-skill",
-        "description": "AI Agent Skill for NSAuditor AI — gives any AI coding agent built-in knowledge of NSAuditor's MCP tools, schemas, plugin",
-        "date": "2026-06-12",
-        "repo": "git+https://github.com/nsasoft/nsauditor-ai-agent-skill.git",
-        "keyword": "ai agent",
-        "this_week": 1391,
-        "prev_week": 1108,
-        "growth_pct": 26,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 17,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@multiplayer-app/ai-agent-types",
         "description": "Shared TypeScript types for Multiplayer AI agent clients and services",
-        "date": "2026-06-11",
+        "date": "2026-06-16",
         "repo": "",
         "keyword": "ai agent",
         "this_week": 1195,
         "prev_week": 990,
         "growth_pct": 21,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 0,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "baxian",
         "description": "AI agent orchestration",
-        "date": "2026-06-14",
+        "date": "2026-06-16",
         "repo": "git+https://github.com/baxian-ai/baxian.git",
         "keyword": "ai agent",
         "this_week": 1004,
-        "prev_week": 2860,
-        "growth_pct": -65,
-        "fetch_failed": false
+        "prev_week": null,
+        "growth_pct": null,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 0,
+        "quality_score": null,
+        "growth_streak": 0
+      },
+      {
+        "name": "oceanbus",
+        "description": "OceanBus AI Agent Communication & Trust Infrastructure SDK",
+        "date": "2026-06-11",
+        "repo": "git+https://github.com/ryanbihai/oceanbus.git",
+        "keyword": "ai agent",
+        "this_week": 728,
+        "prev_week": null,
+        "growth_pct": null,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 5,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@telnyx/ai-agent-lib",
@@ -760,7 +983,11 @@
         "this_week": 611,
         "prev_week": 984,
         "growth_pct": -38,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 15,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "arkaos",
@@ -769,9 +996,43 @@
         "repo": "git+https://github.com/andreagroferreira/arka-os.git",
         "keyword": "ai agent",
         "this_week": 553,
-        "prev_week": 1384,
-        "growth_pct": -60,
-        "fetch_failed": false
+        "prev_week": null,
+        "growth_pct": null,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 15,
+        "quality_score": null,
+        "growth_streak": 0
+      },
+      {
+        "name": "@sendbird/ai-agent-messenger-react-native",
+        "description": "Delight AI Agent Messenger for React Native",
+        "date": "2026-06-10",
+        "repo": "",
+        "keyword": "ai agent",
+        "this_week": 536,
+        "prev_week": 405,
+        "growth_pct": 32,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 6,
+        "quality_score": null,
+        "growth_streak": 0
+      },
+      {
+        "name": "@multiplayer-app/ai-agent-node",
+        "description": "AI Agent Node.js library for multiplayer ai agents",
+        "date": "2026-06-16",
+        "repo": "",
+        "keyword": "ai agent",
+        "this_week": 429,
+        "prev_week": 656,
+        "growth_pct": -35,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 0,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@telnyx/ai-agent-widget",
@@ -782,7 +1043,11 @@
         "this_week": 361,
         "prev_week": 603,
         "growth_pct": -40,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 15,
+        "quality_score": null,
+        "growth_streak": 0
       }
     ],
     "rag": [
@@ -793,9 +1058,13 @@
         "repo": "git+https://github.com/ruvnet/ruvector.git",
         "keyword": "rag",
         "this_week": 137175,
-        "prev_week": 117886,
-        "growth_pct": 16,
-        "fetch_failed": false
+        "prev_week": null,
+        "growth_pct": null,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@mastra/rag",
@@ -806,7 +1075,11 @@
         "this_week": 83168,
         "prev_week": 61350,
         "growth_pct": 36,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 25125,
+        "days_since_publish": 55,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@convex-dev/rag",
@@ -815,20 +1088,43 @@
         "repo": "git+https://github.com/get-convex/rag.git",
         "keyword": "rag",
         "this_week": 24755,
-        "prev_week": 24357,
-        "growth_pct": 2,
-        "fetch_failed": false
+        "prev_week": null,
+        "growth_pct": null,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 28,
+        "quality_score": null,
+        "growth_streak": 0
+      },
+      {
+        "name": "@qvac/rag",
+        "description": "A JavaScript library for Retrieval-Augmented Generation (RAG) within the QVAC ecosystem. Build powerful, context-aware A",
+        "date": "2026-06-15",
+        "repo": "git+https://github.com/tetherto/qvac.git",
+        "keyword": "rag",
+        "this_week": 6120,
+        "prev_week": 4357,
+        "growth_pct": 40,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "opencode-rag-plugin",
         "description": "OpenCode plugin for local-first RAG-based semantic code search",
-        "date": "2026-06-15",
+        "date": "2026-06-16",
         "repo": "git+https://github.com/MrDoe/OpenCodeRAG.git",
         "keyword": "rag",
         "this_week": 2467,
-        "prev_week": 38,
-        "growth_pct": 6392,
-        "fetch_failed": false
+        "prev_week": null,
+        "growth_pct": null,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 0,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "mcp-local-rag",
@@ -837,9 +1133,13 @@
         "repo": "git+https://github.com/shinpr/mcp-local-rag.git",
         "keyword": "rag",
         "this_week": 2294,
-        "prev_week": 1157,
-        "growth_pct": 98,
-        "fetch_failed": false
+        "prev_week": null,
+        "growth_pct": null,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@kuralle-agents/rag-loaders",
@@ -850,7 +1150,11 @@
         "this_week": 1510,
         "prev_week": 3054,
         "growth_pct": -51,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@mcp-abap-adt/llm-agent-rag",
@@ -861,7 +1165,11 @@
         "this_week": 754,
         "prev_week": 1176,
         "growth_pct": -36,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 6,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@hazeljs/rag",
@@ -872,7 +1180,26 @@
         "this_week": 524,
         "prev_week": 307,
         "growth_pct": 71,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
+      },
+      {
+        "name": "@reaatech/hybrid-rag-ingestion",
+        "description": "Document loading, preprocessing, and chunking strategies for hybrid RAG systems",
+        "date": "2026-06-07",
+        "repo": "git+https://github.com/reaatech/hybrid-rag-qdrant.git",
+        "keyword": "rag",
+        "this_week": 519,
+        "prev_week": 408,
+        "growth_pct": 27,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 9,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@wundr.io/rag-utils",
@@ -883,7 +1210,11 @@
         "this_week": 411,
         "prev_week": 3316,
         "growth_pct": -88,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@absolutejs/rag",
@@ -894,7 +1225,11 @@
         "this_week": 384,
         "prev_week": 283,
         "growth_pct": 36,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 16,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@vibe-agent-toolkit/rag",
@@ -905,7 +1240,11 @@
         "this_week": 370,
         "prev_week": 442,
         "growth_pct": -16,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 29,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@absolutejs/rag-pinecone",
@@ -916,18 +1255,26 @@
         "this_week": 305,
         "prev_week": 277,
         "growth_pct": 10,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 18,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
-        "name": "@agilie/rag-bot",
-        "description": "RAG Chat Bot Web Component SDK",
-        "date": "2026-06-09",
-        "repo": "",
+        "name": "@vibe-agent-toolkit/rag-lancedb",
+        "description": "LanceDB implementation of RAG interfaces for vibe-agent-toolkit",
+        "date": "2026-05-18",
+        "repo": "git+https://github.com/jdutton/vibe-agent-toolkit.git",
         "keyword": "rag",
-        "this_week": 205,
-        "prev_week": 169,
-        "growth_pct": 21,
-        "fetch_failed": false
+        "this_week": 298,
+        "prev_week": 337,
+        "growth_pct": -12,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 29,
+        "quality_score": null,
+        "growth_streak": 0
       }
     ],
     "openai": [
@@ -938,20 +1285,28 @@
         "repo": "git+https://github.com/openai/openai-node.git",
         "keyword": "openai",
         "this_week": 25811014,
-        "prev_week": 24458883,
-        "growth_pct": 6,
-        "fetch_failed": false
+        "prev_week": null,
+        "growth_pct": null,
+        "fetch_failed": false,
+        "gh_stars": 10976,
+        "days_since_publish": 13,
+        "quality_score": 0.5544962756005286,
+        "growth_streak": 0
       },
       {
         "name": "@openai/codex",
         "description": "Codex CLI is a coding agent from OpenAI that runs locally on your computer.",
-        "date": "2026-06-09",
+        "date": "2026-06-15",
         "repo": "git+https://github.com/openai/codex.git",
         "keyword": "openai",
         "this_week": 9783190,
         "prev_week": 8774917,
         "growth_pct": 11,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 91384,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@opentelemetry/instrumentation-openai",
@@ -960,9 +1315,13 @@
         "repo": "git+https://github.com/open-telemetry/opentelemetry-js-contrib.git",
         "keyword": "openai",
         "this_week": 4102518,
-        "prev_week": 4063345,
-        "growth_pct": 1,
-        "fetch_failed": false
+        "prev_week": null,
+        "growth_pct": null,
+        "fetch_failed": false,
+        "gh_stars": 910,
+        "days_since_publish": 5,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@ai-sdk/openai-compatible",
@@ -973,7 +1332,11 @@
         "this_week": 3874028,
         "prev_week": 2850369,
         "growth_pct": 36,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 24909,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@langchain/openai",
@@ -984,7 +1347,11 @@
         "this_week": 3301640,
         "prev_week": 2576022,
         "growth_pct": 28,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 17817,
+        "days_since_publish": 26,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@openai/agents-core",
@@ -995,7 +1362,11 @@
         "this_week": 1099556,
         "prev_week": 1130115,
         "growth_pct": -3,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 3227,
+        "days_since_publish": 18,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@openai/agents-openai",
@@ -1006,7 +1377,11 @@
         "this_week": 1056402,
         "prev_week": 909309,
         "growth_pct": 16,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 3227,
+        "days_since_publish": 18,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@openai/agents",
@@ -1017,7 +1392,11 @@
         "this_week": 1052621,
         "prev_week": 918998,
         "growth_pct": 15,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 3227,
+        "days_since_publish": 18,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@traceloop/instrumentation-openai",
@@ -1028,7 +1407,11 @@
         "this_week": 226975,
         "prev_week": 128452,
         "growth_pct": 77,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 403,
+        "days_since_publish": 15,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@openai/agents-extensions",
@@ -1039,7 +1422,11 @@
         "this_week": 132798,
         "prev_week": 192639,
         "growth_pct": -31,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 3227,
+        "days_since_publish": 18,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@langfuse/openai",
@@ -1050,7 +1437,11 @@
         "this_week": 103833,
         "prev_week": 69446,
         "growth_pct": 50,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 18,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@livekit/agents-plugin-openai",
@@ -1061,7 +1452,11 @@
         "this_week": 74654,
         "prev_week": 74195,
         "growth_pct": 1,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 3,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@metorial/openai-compatible",
@@ -1072,7 +1467,11 @@
         "this_week": 69592,
         "prev_week": 55924,
         "growth_pct": 24,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 24,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@adaline/openai",
@@ -1081,9 +1480,13 @@
         "repo": "git+https://github.com/adaline/gateway.git",
         "keyword": "openai",
         "this_week": 36964,
-        "prev_week": 22284,
-        "growth_pct": 66,
-        "fetch_failed": false
+        "prev_week": null,
+        "growth_pct": null,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 7,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@arizeai/openinference-instrumentation-openai",
@@ -1094,7 +1497,11 @@
         "this_week": 24616,
         "prev_week": 15708,
         "growth_pct": 57,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 1028,
+        "days_since_publish": 18,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "genkitx-azure-openai",
@@ -1105,7 +1512,11 @@
         "this_week": 10598,
         "prev_week": 11622,
         "growth_pct": -9,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 21,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@mastra/voice-openai",
@@ -1116,7 +1527,11 @@
         "this_week": 7753,
         "prev_week": 6936,
         "growth_pct": 12,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 25125,
+        "days_since_publish": 14,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@theia/ai-openai",
@@ -1127,7 +1542,11 @@
         "this_week": 5155,
         "prev_week": 4622,
         "growth_pct": 12,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 6,
+        "quality_score": null,
+        "growth_streak": 0
       }
     ],
     "anthropic": [
@@ -1140,29 +1559,41 @@
         "this_week": 23528480,
         "prev_week": 19575768,
         "growth_pct": 20,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 2001,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@anthropic-ai/claude-agent-sdk-linux-x64",
         "description": "Native CLI binary for @anthropic-ai/claude-agent-sdk on linux-x64",
-        "date": "2026-06-13",
+        "date": "2026-06-15",
         "repo": "",
         "keyword": "anthropic",
         "this_week": 4710563,
         "prev_week": 4031343,
         "growth_pct": 17,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@anthropic-ai/claude-agent-sdk-linux-x64-musl",
         "description": "Native CLI binary for @anthropic-ai/claude-agent-sdk on linux-x64-musl",
-        "date": "2026-06-13",
+        "date": "2026-06-15",
         "repo": "",
         "keyword": "anthropic",
         "this_week": 3172704,
         "prev_week": 2419480,
         "growth_pct": 31,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@anthropic-ai/vertex-sdk",
@@ -1171,9 +1602,13 @@
         "repo": "git+https://github.com/anthropics/anthropic-sdk-typescript.git",
         "keyword": "anthropic",
         "this_week": 1305228,
-        "prev_week": 1490613,
-        "growth_pct": -12,
-        "fetch_failed": false
+        "prev_week": null,
+        "growth_pct": null,
+        "fetch_failed": false,
+        "gh_stars": 2001,
+        "days_since_publish": 7,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@traceloop/instrumentation-anthropic",
@@ -1182,9 +1617,13 @@
         "repo": "git+https://github.com/traceloop/openllmetry-js.git",
         "keyword": "anthropic",
         "this_week": 1079354,
-        "prev_week": null,
-        "growth_pct": null,
-        "fetch_failed": false
+        "prev_week": 1273161,
+        "growth_pct": -15,
+        "fetch_failed": false,
+        "gh_stars": 403,
+        "days_since_publish": 15,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@langchain/anthropic",
@@ -1195,7 +1634,11 @@
         "this_week": 970139,
         "prev_week": 745263,
         "growth_pct": 30,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 17817,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@anthropic-ai/bedrock-sdk",
@@ -1206,62 +1649,86 @@
         "this_week": 594936,
         "prev_week": 420815,
         "growth_pct": 41,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 2001,
+        "days_since_publish": 7,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@anthropic-ai/claude-agent-sdk-darwin-arm64",
         "description": "Native CLI binary for @anthropic-ai/claude-agent-sdk on darwin-arm64",
-        "date": "2026-06-13",
+        "date": "2026-06-15",
         "repo": "",
         "keyword": "anthropic",
         "this_week": 231040,
         "prev_week": 204535,
         "growth_pct": 13,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@anthropic-ai/claude-agent-sdk-linux-arm64",
         "description": "Native CLI binary for @anthropic-ai/claude-agent-sdk on linux-arm64",
-        "date": "2026-06-13",
+        "date": "2026-06-15",
         "repo": "",
         "keyword": "anthropic",
         "this_week": 214389,
         "prev_week": 163521,
         "growth_pct": 31,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@anthropic-ai/claude-agent-sdk-win32-x64",
         "description": "Native CLI binary for @anthropic-ai/claude-agent-sdk on win32-x64",
-        "date": "2026-06-13",
+        "date": "2026-06-15",
         "repo": "",
         "keyword": "anthropic",
         "this_week": 199744,
         "prev_week": 164131,
         "growth_pct": 22,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@anthropic-ai/sandbox-runtime",
         "description": "Anthropic Sandbox Runtime (ASRT) - A general-purpose tool for wrapping security boundaries around arbitrary processes",
-        "date": "2026-06-04",
+        "date": "2026-06-15",
         "repo": "git+https://github.com/anthropic-experimental/sandbox-runtime.git",
         "keyword": "anthropic",
         "this_week": 171898,
         "prev_week": 154331,
         "growth_pct": 11,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@anthropic-ai/claude-agent-sdk-linux-arm64-musl",
         "description": "Native CLI binary for @anthropic-ai/claude-agent-sdk on linux-arm64-musl",
-        "date": "2026-06-13",
+        "date": "2026-06-15",
         "repo": "",
         "keyword": "anthropic",
         "this_week": 169405,
         "prev_week": 136848,
         "growth_pct": 24,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@anthropic-ai/foundry-sdk",
@@ -1272,18 +1739,26 @@
         "this_week": 99667,
         "prev_week": 60020,
         "growth_pct": 66,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 2001,
+        "days_since_publish": 7,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@anthropic-ai/claude-agent-sdk-darwin-x64",
         "description": "Native CLI binary for @anthropic-ai/claude-agent-sdk on darwin-x64",
-        "date": "2026-06-13",
+        "date": "2026-06-15",
         "repo": "",
         "keyword": "anthropic",
         "this_week": 81312,
         "prev_week": 60815,
         "growth_pct": 34,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@metorial/anthropic",
@@ -1294,18 +1769,26 @@
         "this_week": 79973,
         "prev_week": 63925,
         "growth_pct": 25,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 24,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@anthropic-ai/claude-agent-sdk-win32-arm64",
         "description": "Native CLI binary for @anthropic-ai/claude-agent-sdk on win32-arm64",
-        "date": "2026-06-13",
+        "date": "2026-06-15",
         "repo": "",
         "keyword": "anthropic",
         "this_week": 62588,
         "prev_week": 73073,
         "growth_pct": -14,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@adaline/anthropic",
@@ -1316,7 +1799,11 @@
         "this_week": 36810,
         "prev_week": 32841,
         "growth_pct": 12,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 7,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@arizeai/openinference-instrumentation-anthropic",
@@ -1327,7 +1814,11 @@
         "this_week": 18085,
         "prev_week": 13031,
         "growth_pct": 39,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 1028,
+        "days_since_publish": 18,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@genkit-ai/anthropic",
@@ -1338,7 +1829,11 @@
         "this_week": 11489,
         "prev_week": 8795,
         "growth_pct": 31,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 19,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@theia/ai-anthropic",
@@ -1349,7 +1844,11 @@
         "this_week": 3852,
         "prev_week": 2614,
         "growth_pct": 47,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 6,
+        "quality_score": null,
+        "growth_streak": 0
       }
     ],
     "embedding": [
@@ -1362,18 +1861,26 @@
         "this_week": 1830467,
         "prev_week": 1597090,
         "growth_pct": 15,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 598,
+        "days_since_publish": 11,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@remotion/player",
         "description": "React component for embedding a Remotion preview into your app",
-        "date": "2026-06-13",
+        "date": "2026-06-16",
         "repo": "https://github.com/remotion-dev/remotion/tree/main/packages/player",
         "keyword": "embedding",
         "this_week": 869777,
         "prev_week": 824572,
         "growth_pct": 5,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 50295,
+        "days_since_publish": 0,
+        "quality_score": 0.6671765602384576,
+        "growth_streak": 0
       },
       {
         "name": "@bytecodealliance/componentize-js",
@@ -1384,7 +1891,11 @@
         "this_week": 686388,
         "prev_week": 606130,
         "growth_pct": 13,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 376,
+        "days_since_publish": 27,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@oneschema/importer",
@@ -1395,7 +1906,11 @@
         "this_week": 282401,
         "prev_week": 217184,
         "growth_pct": 30,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 22,
+        "days_since_publish": 6,
+        "quality_score": 0.1806379887559158,
+        "growth_streak": 0
       },
       {
         "name": "@oneschema/react",
@@ -1406,7 +1921,11 @@
         "this_week": 239644,
         "prev_week": 180591,
         "growth_pct": 33,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 22,
+        "days_since_publish": 6,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@embedpdf/react-pdf-viewer",
@@ -1415,9 +1934,13 @@
         "repo": "git+https://github.com/embedpdf/embed-pdf-viewer.git",
         "keyword": "embedding",
         "this_week": 148355,
-        "prev_week": null,
-        "growth_pct": null,
-        "fetch_failed": false
+        "prev_week": 112001,
+        "growth_pct": 32,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 8,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@metabase/embedding-sdk-react",
@@ -1428,7 +1951,11 @@
         "this_week": 62286,
         "prev_week": 42748,
         "growth_pct": 46,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 6,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@gooddata/sdk-embedding",
@@ -1439,7 +1966,11 @@
         "this_week": 8429,
         "prev_week": 9009,
         "growth_pct": -6,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 5,
+        "quality_score": 0.6407799918170698,
+        "growth_streak": 0
       },
       {
         "name": "embedding-atlas",
@@ -1450,7 +1981,11 @@
         "this_week": 2818,
         "prev_week": 5062,
         "growth_pct": -44,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 15,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@oneschema/filefeeds",
@@ -1461,7 +1996,11 @@
         "this_week": 826,
         "prev_week": 346,
         "growth_pct": 139,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 22,
+        "days_since_publish": 6,
+        "quality_score": null,
+        "growth_streak": 0
       }
     ],
     "vector store": [
@@ -1474,7 +2013,11 @@
         "this_week": 52551,
         "prev_week": 35928,
         "growth_pct": 46,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 25125,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@mastra/mongodb",
@@ -1485,7 +2028,11 @@
         "this_week": 25855,
         "prev_week": 21720,
         "growth_pct": 19,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 25125,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@mastra/turbopuffer",
@@ -1496,7 +2043,11 @@
         "this_week": 2225,
         "prev_week": 5097,
         "growth_pct": -56,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 25125,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@karmaniverous/jeeves-watcher",
@@ -1507,7 +2058,11 @@
         "this_week": 1865,
         "prev_week": 124,
         "growth_pct": 1404,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 3,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@mastra/couchbase",
@@ -1518,7 +2073,11 @@
         "this_week": 1443,
         "prev_week": 1915,
         "growth_pct": -25,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 25125,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@mastra/opensearch",
@@ -1529,7 +2088,11 @@
         "this_week": 1212,
         "prev_week": 3633,
         "growth_pct": -67,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": 25125,
+        "days_since_publish": 4,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@vivantel/virage-core",
@@ -1540,7 +2103,11 @@
         "this_week": 1172,
         "prev_week": 4379,
         "growth_pct": -73,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@vivantel/virage-store-chromadb",
@@ -1551,7 +2118,11 @@
         "this_week": 620,
         "prev_week": 1292,
         "growth_pct": -52,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@vivantel/virage-store-lancedb",
@@ -1562,7 +2133,11 @@
         "this_week": 548,
         "prev_week": 1842,
         "growth_pct": -70,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@vivantel/virage-store-qdrant",
@@ -1573,7 +2148,11 @@
         "this_week": 497,
         "prev_week": 1997,
         "growth_pct": -75,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@anvia/qdrant",
@@ -1584,7 +2163,11 @@
         "this_week": 487,
         "prev_week": 311,
         "growth_pct": 57,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@anvia/chroma",
@@ -1595,7 +2178,26 @@
         "this_week": 475,
         "prev_week": 326,
         "growth_pct": 46,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
+      },
+      {
+        "name": "@mcp-abap-adt/qdrant-rag",
+        "description": "QdrantRag vector store and QdrantRagProvider for @mcp-abap-adt/llm-agent.",
+        "date": "2026-06-10",
+        "repo": "git+https://github.com/fr0ster/llm-agent.git",
+        "keyword": "vector store",
+        "this_week": 355,
+        "prev_week": 748,
+        "growth_pct": -53,
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 6,
+        "quality_score": null,
+        "growth_streak": 0
       }
     ],
     "agentic": [
@@ -1608,7 +2210,11 @@
         "this_week": 64894,
         "prev_week": 70910,
         "growth_pct": -8,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 6,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@composio/mastra",
@@ -1619,7 +2225,11 @@
         "this_week": 50792,
         "prev_week": 47635,
         "growth_pct": 7,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 34,
+        "quality_score": null,
+        "growth_streak": 0
       },
       {
         "name": "@xtalpi/agentic-lab-cli",
@@ -1630,7 +2240,11 @@
         "this_week": 217,
         "prev_week": 698,
         "growth_pct": -69,
-        "fetch_failed": false
+        "fetch_failed": false,
+        "gh_stars": null,
+        "days_since_publish": 1,
+        "quality_score": null,
+        "growth_streak": 0
       }
     ]
   },
@@ -1642,9 +2256,13 @@
       "repo": "git+https://github.com/openai/openai-node.git",
       "keyword": "openai",
       "this_week": 25811014,
-      "prev_week": 24458883,
-      "growth_pct": 6,
-      "fetch_failed": false
+      "prev_week": null,
+      "growth_pct": null,
+      "fetch_failed": false,
+      "gh_stars": 10976,
+      "days_since_publish": 13,
+      "quality_score": 0.5544962756005286,
+      "growth_streak": 0
     },
     {
       "name": "@anthropic-ai/sdk",
@@ -1655,29 +2273,41 @@
       "this_week": 23528480,
       "prev_week": 19575768,
       "growth_pct": 20,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 2001,
+      "days_since_publish": 1,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@ai-sdk/gateway",
       "description": "The Gateway provider for the [AI SDK](https://ai-sdk.dev/docs) allows the use of a wide variety of AI models and provide",
-      "date": "2026-06-14",
+      "date": "2026-06-15",
       "repo": "git+https://github.com/vercel/ai.git",
       "keyword": "ai sdk",
       "this_week": 13520307,
       "prev_week": 10758328,
       "growth_pct": 26,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 24909,
+      "days_since_publish": 1,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@openai/codex",
       "description": "Codex CLI is a coding agent from OpenAI that runs locally on your computer.",
-      "date": "2026-06-09",
+      "date": "2026-06-15",
       "repo": "git+https://github.com/openai/codex.git",
       "keyword": "openai",
       "this_week": 9783190,
       "prev_week": 8774917,
       "growth_pct": 11,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 91384,
+      "days_since_publish": 1,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@ai-sdk/openai",
@@ -1688,7 +2318,11 @@
       "this_week": 7657463,
       "prev_week": 5936406,
       "growth_pct": 29,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 24909,
+      "days_since_publish": 4,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@ai-sdk/anthropic",
@@ -1699,7 +2333,11 @@
       "this_week": 7150221,
       "prev_week": 5746556,
       "growth_pct": 24,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 24909,
+      "days_since_publish": 4,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@playwright/mcp",
@@ -1708,20 +2346,28 @@
       "repo": "git+https://github.com/microsoft/playwright-mcp.git",
       "keyword": "mcp",
       "this_week": 6272314,
-      "prev_week": null,
-      "growth_pct": null,
-      "fetch_failed": false
+      "prev_week": 4473748,
+      "growth_pct": 40,
+      "fetch_failed": false,
+      "gh_stars": 33979,
+      "days_since_publish": 6,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@ai-sdk/react",
       "description": "[React](https://react.dev/) UI components for the [AI SDK](https://ai-sdk.dev/docs):",
-      "date": "2026-06-14",
+      "date": "2026-06-15",
       "repo": "git+https://github.com/vercel/ai.git",
       "keyword": "ai sdk",
       "this_week": 5880856,
       "prev_week": 4739468,
       "growth_pct": 24,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 24909,
+      "days_since_publish": 1,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@firebase/ai",
@@ -1732,7 +2378,11 @@
       "this_week": 5535860,
       "prev_week": 4367164,
       "growth_pct": 27,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 5125,
+      "days_since_publish": 19,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@ai-sdk/google",
@@ -1743,18 +2393,26 @@
       "this_week": 5203392,
       "prev_week": 4027225,
       "growth_pct": 29,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 24909,
+      "days_since_publish": 4,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@anthropic-ai/claude-agent-sdk-linux-x64",
       "description": "Native CLI binary for @anthropic-ai/claude-agent-sdk on linux-x64",
-      "date": "2026-06-13",
+      "date": "2026-06-15",
       "repo": "",
       "keyword": "anthropic",
       "this_week": 4710563,
       "prev_week": 4031343,
       "growth_pct": 17,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 1,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@opentelemetry/instrumentation-openai",
@@ -1763,9 +2421,13 @@
       "repo": "git+https://github.com/open-telemetry/opentelemetry-js-contrib.git",
       "keyword": "openai",
       "this_week": 4102518,
-      "prev_week": 4063345,
-      "growth_pct": 1,
-      "fetch_failed": false
+      "prev_week": null,
+      "growth_pct": null,
+      "fetch_failed": false,
+      "gh_stars": 910,
+      "days_since_publish": 5,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@ai-sdk/openai-compatible",
@@ -1776,7 +2438,11 @@
       "this_week": 3874028,
       "prev_week": 2850369,
       "growth_pct": 36,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 24909,
+      "days_since_publish": 4,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@langchain/openai",
@@ -1787,18 +2453,26 @@
       "this_week": 3301640,
       "prev_week": 2576022,
       "growth_pct": 28,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 17817,
+      "days_since_publish": 26,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@anthropic-ai/claude-agent-sdk-linux-x64-musl",
       "description": "Native CLI binary for @anthropic-ai/claude-agent-sdk on linux-x64-musl",
-      "date": "2026-06-13",
+      "date": "2026-06-15",
       "repo": "",
       "keyword": "anthropic",
       "this_week": 3172704,
       "prev_week": 2419480,
       "growth_pct": 31,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 1,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "chrome-devtools-mcp",
@@ -1809,7 +2483,11 @@
       "this_week": 2996115,
       "prev_week": 1545227,
       "growth_pct": 94,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 43735,
+      "days_since_publish": 8,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@earendil-works/pi-ai",
@@ -1820,7 +2498,11 @@
       "this_week": 2430603,
       "prev_week": 1524782,
       "growth_pct": 59,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 63118,
+      "days_since_publish": 1,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@ai-sdk/google-vertex",
@@ -1831,7 +2513,11 @@
       "this_week": 2076334,
       "prev_week": 1668559,
       "growth_pct": 24,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 24909,
+      "days_since_publish": 4,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@ai-sdk/amazon-bedrock",
@@ -1842,18 +2528,11 @@
       "this_week": 2065604,
       "prev_week": 1608430,
       "growth_pct": 28,
-      "fetch_failed": false
-    },
-    {
-      "name": "@vercel/detect-agent",
-      "description": "Detect if code is running in an AI agent or automated development environment",
-      "date": "2026-04-17",
-      "repo": "git+https://github.com/vercel/vercel.git",
-      "keyword": "ai agent",
-      "this_week": 1971464,
-      "prev_week": 2290899,
-      "growth_pct": -14,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 24909,
+      "days_since_publish": 4,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@vercel/prepare-flags-definitions",
@@ -1864,7 +2543,11 @@
       "this_week": 1830467,
       "prev_week": 1597090,
       "growth_pct": 15,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 598,
+      "days_since_publish": 11,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@ai-sdk/xai",
@@ -1875,18 +2558,11 @@
       "this_week": 1770736,
       "prev_week": 1641467,
       "growth_pct": 8,
-      "fetch_failed": false
-    },
-    {
-      "name": "@modelcontextprotocol/ext-apps",
-      "description": "MCP Apps SDK — Enable MCP servers to display interactive user interfaces in conversational clients.",
-      "date": "2026-06-05",
-      "repo": "git+https://github.com/modelcontextprotocol/ext-apps.git",
-      "keyword": "mcp",
-      "this_week": 1748819,
-      "prev_week": 1404597,
-      "growth_pct": 25,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 24909,
+      "days_since_publish": 4,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@ai-sdk/azure",
@@ -1897,7 +2573,11 @@
       "this_week": 1665380,
       "prev_week": 1274849,
       "growth_pct": 31,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 24909,
+      "days_since_publish": 4,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "mcp-proxy",
@@ -1908,7 +2588,41 @@
       "this_week": 1600004,
       "prev_week": 1151266,
       "growth_pct": 39,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 264,
+      "days_since_publish": 27,
+      "quality_score": null,
+      "growth_streak": 0
+    },
+    {
+      "name": "@ai-sdk/groq",
+      "description": "The **[Groq provider](https://ai-sdk.dev/providers/ai-sdk-providers/groq)** for the [AI SDK](https://ai-sdk.dev/docs) co",
+      "date": "2026-06-12",
+      "repo": "git+https://github.com/vercel/ai.git",
+      "keyword": "ai sdk",
+      "this_week": 1351157,
+      "prev_week": 1127383,
+      "growth_pct": 20,
+      "fetch_failed": false,
+      "gh_stars": 24909,
+      "days_since_publish": 4,
+      "quality_score": null,
+      "growth_streak": 0
+    },
+    {
+      "name": "@anthropic-ai/vertex-sdk",
+      "description": "The official TypeScript library for the Anthropic Vertex API",
+      "date": "2026-06-09",
+      "repo": "git+https://github.com/anthropics/anthropic-sdk-typescript.git",
+      "keyword": "anthropic",
+      "this_week": 1305228,
+      "prev_week": null,
+      "growth_pct": null,
+      "fetch_failed": false,
+      "gh_stars": 2001,
+      "days_since_publish": 7,
+      "quality_score": null,
+      "growth_streak": 0
     }
   ],
   "top_by_growth": [
@@ -1921,18 +2635,26 @@
       "this_week": 1865,
       "prev_week": 124,
       "growth_pct": 1404,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 3,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
-      "name": "@github/computer-use-mcp",
-      "description": "Computer Use MCP Server",
-      "date": "2026-06-10",
-      "repo": "git+https://github.com/github/computer-use.git",
+      "name": "hostinger-api-mcp",
+      "description": "MCP server for Hostinger API",
+      "date": "2026-06-11",
+      "repo": "git+https://github.com/hostinger/api-mcp-server.git",
       "keyword": "mcp",
-      "this_week": 72918,
-      "prev_week": 23149,
-      "growth_pct": 215,
-      "fetch_failed": false
+      "this_week": 28917,
+      "prev_week": 10437,
+      "growth_pct": 177,
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 5,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@mastra/datadog",
@@ -1943,7 +2665,11 @@
       "this_week": 103953,
       "prev_week": 39845,
       "growth_pct": 161,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 25125,
+      "days_since_publish": 4,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@supabase/mcp-utils",
@@ -1954,7 +2680,11 @@
       "this_week": 150892,
       "prev_week": 59164,
       "growth_pct": 155,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 8,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@oneschema/filefeeds",
@@ -1965,29 +2695,26 @@
       "this_week": 826,
       "prev_week": 346,
       "growth_pct": 139,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 22,
+      "days_since_publish": 6,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
-      "name": "@aikidosec/mcp",
-      "description": "Aikido MCP server",
-      "date": "2026-06-11",
-      "repo": "",
+      "name": "mcp-searxng",
+      "description": "MCP server for SearXNG integration",
+      "date": "2026-06-12",
+      "repo": "git+https://github.com/ihor-sokoliuk/mcp-searxng.git",
       "keyword": "mcp",
-      "this_week": 23082,
-      "prev_week": 10787,
-      "growth_pct": 114,
-      "fetch_failed": false
-    },
-    {
-      "name": "mcp-local-rag",
-      "description": "Local RAG MCP Server - Easy-to-setup document search with minimal configuration",
-      "date": "2026-06-15",
-      "repo": "git+https://github.com/shinpr/mcp-local-rag.git",
-      "keyword": "rag",
-      "this_week": 2294,
-      "prev_week": 1157,
-      "growth_pct": 98,
-      "fetch_failed": false
+      "this_week": 19441,
+      "prev_week": 9448,
+      "growth_pct": 106,
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 4,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "chrome-devtools-mcp",
@@ -1998,7 +2725,11 @@
       "this_week": 2996115,
       "prev_week": 1545227,
       "growth_pct": 94,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 43735,
+      "days_since_publish": 8,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@traceloop/instrumentation-openai",
@@ -2009,18 +2740,11 @@
       "this_week": 226975,
       "prev_week": 128452,
       "growth_pct": 77,
-      "fetch_failed": false
-    },
-    {
-      "name": "@traceloop/instrumentation-mcp",
-      "description": "MCP (Model Context Protocol) Instrumentation",
-      "date": "2026-06-01",
-      "repo": "git+https://github.com/traceloop/openllmetry-js.git",
-      "keyword": "mcp",
-      "this_week": 47671,
-      "prev_week": 27132,
-      "growth_pct": 76,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 403,
+      "days_since_publish": 15,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@outputai/llm",
@@ -2031,18 +2755,26 @@
       "this_week": 3171,
       "prev_week": 1801,
       "growth_pct": 76,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 6,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@capgo/capacitor-llm",
       "description": "Adds support for LLM locally runned for Capacitor",
-      "date": "2026-05-11",
+      "date": "2026-06-16",
       "repo": "git+https://github.com/Cap-go/capacitor-llm.git",
       "keyword": "llm",
       "this_week": 4734,
       "prev_week": 2728,
       "growth_pct": 74,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 0,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@hazeljs/rag",
@@ -2053,7 +2785,11 @@
       "this_week": 524,
       "prev_week": 307,
       "growth_pct": 71,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 1,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "oci-generativeaiagent",
@@ -2064,18 +2800,11 @@
       "this_week": 98967,
       "prev_week": 58509,
       "growth_pct": 69,
-      "fetch_failed": false
-    },
-    {
-      "name": "@adaline/openai",
-      "description": "Adaline OpenAI",
-      "date": "2026-06-09",
-      "repo": "git+https://github.com/adaline/gateway.git",
-      "keyword": "openai",
-      "this_week": 36964,
-      "prev_week": 22284,
-      "growth_pct": 66,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 7,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@anthropic-ai/foundry-sdk",
@@ -2086,18 +2815,26 @@
       "this_week": 99667,
       "prev_week": 60020,
       "growth_pct": 66,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 2001,
+      "days_since_publish": 7,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
-      "name": "@miller-tech/uap",
-      "description": "Autonomous AI agent memory system with CLAUDE.md protocol enforcement",
-      "date": "2026-06-15",
-      "repo": "git+https://github.com/DammianMiller/universal-agent-protocol.git",
-      "keyword": "ai agent",
-      "this_week": 12256,
-      "prev_week": 7406,
-      "growth_pct": 65,
-      "fetch_failed": false
+      "name": "@eslint/mcp",
+      "description": "MCP server for ESLint",
+      "date": "2026-06-12",
+      "repo": "git+https://github.com/eslint/rewrite.git",
+      "keyword": "mcp",
+      "this_week": 20654,
+      "prev_week": 12600,
+      "growth_pct": 64,
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 4,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@earendil-works/pi-ai",
@@ -2108,18 +2845,11 @@
       "this_week": 2430603,
       "prev_week": 1524782,
       "growth_pct": 59,
-      "fetch_failed": false
-    },
-    {
-      "name": "ai-agent-quest-sdk",
-      "description": "Utility SDK for the ai-agent-quest project.",
-      "date": "2026-05-30",
-      "repo": "",
-      "keyword": "ai agent",
-      "this_week": 2631,
-      "prev_week": 1656,
-      "growth_pct": 59,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 63118,
+      "days_since_publish": 1,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@arizeai/openinference-instrumentation-openai",
@@ -2130,7 +2860,11 @@
       "this_week": 24616,
       "prev_week": 15708,
       "growth_pct": 57,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 1028,
+      "days_since_publish": 18,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@anvia/qdrant",
@@ -2141,7 +2875,11 @@
       "this_week": 487,
       "prev_week": 311,
       "growth_pct": 57,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 1,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@langfuse/openai",
@@ -2152,7 +2890,11 @@
       "this_week": 103833,
       "prev_week": 69446,
       "growth_pct": 50,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 18,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@theia/ai-anthropic",
@@ -2163,7 +2905,11 @@
       "this_week": 3852,
       "prev_week": 2614,
       "growth_pct": 47,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 6,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@metabase/embedding-sdk-react",
@@ -2174,7 +2920,11 @@
       "this_week": 62286,
       "prev_week": 42748,
       "growth_pct": 46,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 6,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@mastra/duckdb",
@@ -2185,43 +2935,104 @@
       "this_week": 52551,
       "prev_week": 35928,
       "growth_pct": 46,
-      "fetch_failed": false
+      "fetch_failed": false,
+      "gh_stars": 25125,
+      "days_since_publish": 4,
+      "quality_score": null,
+      "growth_streak": 0
+    },
+    {
+      "name": "@anvia/chroma",
+      "description": "ChromaDB vector store adapter for Anvia.",
+      "date": "2026-06-15",
+      "repo": "git+https://github.com/anvia-hq/anvia.git",
+      "keyword": "vector store",
+      "this_week": 475,
+      "prev_week": 326,
+      "growth_pct": 46,
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 1,
+      "quality_score": null,
+      "growth_streak": 0
+    },
+    {
+      "name": "@llm-ports/core",
+      "description": "Provider-agnostic LLM port interface, registry, cost gating, content blocks, validation strategies. The foundation of ll",
+      "date": "2026-06-15",
+      "repo": "git+https://github.com/baabakk/llm-ports.git",
+      "keyword": "llm",
+      "this_week": 728,
+      "prev_week": 516,
+      "growth_pct": 41,
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 1,
+      "quality_score": null,
+      "growth_streak": 0
+    },
+    {
+      "name": "@sendbird/ai-agent-messenger-react",
+      "description": "Delight AI Agent Messenger for React",
+      "date": "2026-06-10",
+      "repo": "",
+      "keyword": "ai agent",
+      "this_week": 3210,
+      "prev_week": 2284,
+      "growth_pct": 41,
+      "fetch_failed": false,
+      "gh_stars": null,
+      "days_since_publish": 6,
+      "quality_score": null,
+      "growth_streak": 0
+    },
+    {
+      "name": "@anthropic-ai/bedrock-sdk",
+      "description": "The official TypeScript library for the Anthropic Bedrock API",
+      "date": "2026-06-09",
+      "repo": "git+https://github.com/anthropics/anthropic-sdk-typescript.git",
+      "keyword": "anthropic",
+      "this_week": 594936,
+      "prev_week": 420815,
+      "growth_pct": 41,
+      "fetch_failed": false,
+      "gh_stars": 2001,
+      "days_since_publish": 7,
+      "quality_score": null,
+      "growth_streak": 0
     }
   ],
   "brand_new": [],
   "fetch_failed": [
     {
-      "name": "@voltagent/core",
-      "description": "VoltAgent Core - AI agent framework for JavaScript",
-      "date": "2026-06-08",
-      "repo": "git+https://github.com/VoltAgent/voltagent.git",
+      "name": "@miller-tech/uap",
+      "description": "Autonomous AI agent memory system with CLAUDE.md protocol enforcement",
+      "date": "2026-06-16",
+      "repo": "git+https://github.com/DammianMiller/universal-agent-protocol.git",
       "keyword": "ai agent",
       "this_week": null,
-      "prev_week": 8671,
+      "prev_week": 7406,
       "growth_pct": null,
-      "fetch_failed": true
+      "fetch_failed": true,
+      "gh_stars": null,
+      "days_since_publish": 0,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
-      "name": "@multiplayer-app/ai-agent-node",
-      "description": "AI Agent Node.js library for multiplayer ai agents",
-      "date": "2026-06-11",
-      "repo": "",
+      "name": "@grackle-ai/powerline",
+      "description": "gRPC PowerLine server for Grackle AI agent integration",
+      "date": "2026-06-12",
+      "repo": "git+https://github.com/nick-pape/grackle.git",
       "keyword": "ai agent",
       "this_week": null,
-      "prev_week": 656,
+      "prev_week": 4837,
       "growth_pct": null,
-      "fetch_failed": true
-    },
-    {
-      "name": "@sleep2agi/agent-network-dashboard",
-      "description": "Agent Network Dashboard — Web UI for managing AI Agent networks",
-      "date": "2026-06-10",
-      "repo": "git+https://github.com/sleep2agi/agent-network-dashboard.git",
-      "keyword": "ai agent",
-      "this_week": null,
-      "prev_week": 8810,
-      "growth_pct": null,
-      "fetch_failed": true
+      "fetch_failed": true,
+      "gh_stars": null,
+      "days_since_publish": 4,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
       "name": "@kuralle-agents/rag",
@@ -2232,29 +3043,26 @@
       "this_week": null,
       "prev_week": 1405,
       "growth_pct": null,
-      "fetch_failed": true
+      "fetch_failed": true,
+      "gh_stars": null,
+      "days_since_publish": 4,
+      "quality_score": null,
+      "growth_streak": 0
     },
     {
-      "name": "@qvac/rag",
-      "description": "A JavaScript library for Retrieval-Augmented Generation (RAG) within the QVAC ecosystem. Build powerful, context-aware A",
-      "date": "2026-06-15",
-      "repo": "git+https://github.com/tetherto/qvac.git",
+      "name": "@agilie/rag-bot",
+      "description": "RAG Chat Bot Web Component SDK",
+      "date": "2026-06-09",
+      "repo": "",
       "keyword": "rag",
       "this_week": null,
-      "prev_week": 4357,
+      "prev_week": 169,
       "growth_pct": null,
-      "fetch_failed": true
-    },
-    {
-      "name": "@mcp-abap-adt/qdrant-rag",
-      "description": "QdrantRag vector store and QdrantRagProvider for @mcp-abap-adt/llm-agent.",
-      "date": "2026-06-10",
-      "repo": "git+https://github.com/fr0ster/llm-agent.git",
-      "keyword": "vector store",
-      "this_week": null,
-      "prev_week": 748,
-      "growth_pct": null,
-      "fetch_failed": true
+      "fetch_failed": true,
+      "gh_stars": null,
+      "days_since_publish": 7,
+      "quality_score": null,
+      "growth_streak": 0
     }
   ]
 }
