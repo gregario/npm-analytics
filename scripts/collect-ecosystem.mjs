@@ -29,10 +29,14 @@
  *   growth_pct,                     // null if prev_week === 0 or null (brand new / fetch failed)
  *   fetch_failed,                   // true if download fetch failed
  *   keyword,                        // category keyword that surfaced it
+ *   gh_stars,                        // GitHub stars (null = no repo / fetch failed)
+ *   days_since_publish,             // integer days since first npm publish
+ *   quality_score,                  // npms.io composite score 0..1 (null = unavailable)
+ *   growth_streak,                  // consecutive weeks of positive WoW growth (0 = new/flat/down)
  * }
  */
 
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { writeFileSync, mkdirSync, existsSync, readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -73,6 +77,15 @@ const BATCH_DELAY_UNSCOPED = 800;
 // Delay between individual scoped package API calls (ms)
 // npm downloads API rate limit is ~1 req/sec for scoped packages
 const BATCH_DELAY_SCOPED = 700;
+
+// Delay between npms.io quality score fetches (ms) — their API is generous but be polite
+const BATCH_DELAY_NPMS = 300;
+
+// Delay between GitHub API calls (ms) — unauthenticated: 60 req/min
+const BATCH_DELAY_GH = 1100;
+
+// Max packages to enrich with GitHub stars (unauthenticated rate limit friendly)
+const MAX_GH_ENRICHMENT = 50;
 
 // Retry config — exponential backoff with jitter
 const MAX_RETRIES = 5;
@@ -269,6 +282,153 @@ async function getDownloads(names, period) {
 }
 
 // ---------------------------------------------------------------------------
+// Enrichment helpers — GitHub stars, npms.io quality, growth streak
+// ---------------------------------------------------------------------------
+
+/**
+ * Extract the GitHub owner/repo slug from a repo URL.
+ * Returns null if not a GitHub URL.
+ */
+function githubSlug(repoUrl) {
+  if (!repoUrl) return null;
+  const clean = repoUrl.replace(/^git\+/, '').replace(/\.git$/, '');
+  const m = clean.match(/github\.com\/([^/]+\/[^/]+)/);
+  return m ? m[1] : null;
+}
+
+/**
+ * Fetch GitHub stars for a list of packages that have GitHub repo URLs.
+ * Uses the unauthenticated GitHub API (60 req/min).
+ * Enriches in-place: adds `gh_stars` field to each entry.
+ * Only fetches for the top MAX_GH_ENRICHMENT packages by download count to
+ * stay within rate limits.
+ */
+async function enrichGitHubStars(entries) {
+  // Sort by downloads desc, take top N that have a GitHub repo
+  const candidates = [...entries]
+    .filter(e => githubSlug(e.repo))
+    .sort((a, b) => (b.this_week ?? 0) - (a.this_week ?? 0))
+    .slice(0, MAX_GH_ENRICHMENT);
+
+  const slugToStars = {};
+  let done = 0;
+  for (const entry of candidates) {
+    const slug = githubSlug(entry.repo);
+    if (!slug || slugToStars[slug] !== undefined) {
+      done++;
+      continue;
+    }
+    const url = `https://api.github.com/repos/${slug}`;
+    const data = await fetchJSON(url);
+    slugToStars[slug] = data?.stargazers_count ?? null;
+    done++;
+    if (done < candidates.length) await sleep(BATCH_DELAY_GH + jitter());
+  }
+
+  // Apply to all entries (not just candidates)
+  for (const entry of entries) {
+    const slug = githubSlug(entry.repo);
+    if (slug && slugToStars[slug] !== undefined) {
+      entry.gh_stars = slugToStars[slug];
+    } else {
+      entry.gh_stars = null;
+    }
+  }
+}
+
+/**
+ * Fetch npms.io quality scores for a batch of package names.
+ * Uses the bulk POST endpoint (up to 250 packages per request).
+ * Returns { [name]: score } where score is 0..1 or null.
+ */
+async function fetchNpmsScores(names) {
+  const result = {};
+  // Batch in groups of 100 to be safe
+  for (let i = 0; i < names.length; i += 100) {
+    const batch = names.slice(i, i + 100);
+    let data;
+    try {
+      const res = await fetch('https://api.npms.io/v2/package/mget', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'User-Agent': 'npm-analytics-ecosystem/1.0' },
+        body: JSON.stringify(batch),
+        signal: AbortSignal.timeout(20000),
+      });
+      if (!res.ok) { data = null; } else { data = await res.json(); }
+    } catch { data = null; }
+
+    if (data) {
+      for (const name of batch) {
+        const entry = data[name];
+        result[name] = entry?.score?.final ?? null;
+      }
+    } else {
+      for (const name of batch) result[name] = null;
+    }
+    if (i + 100 < names.length) await sleep(BATCH_DELAY_NPMS + jitter());
+  }
+  return result;
+}
+
+/**
+ * Compute growth streaks from historical JSON files.
+ * A streak = number of consecutive prior weeks where growth_pct > 0.
+ * Reads YYYY-WW.json files from ECO_DIR, ordered newest-to-oldest.
+ * Returns { [packageName]: streakCount }
+ */
+function computeGrowthStreaks(currentWeek) {
+  const streaks = {};
+
+  // Build the list by trying the last 12 weeks
+  const weekHistory = [];
+  const now = new Date();
+  for (let w = 1; w <= 12; w++) {
+    const d = new Date(now);
+    d.setUTCDate(d.getUTCDate() - w * 7);
+    const wLabel = isoWeek(d);
+    if (wLabel === currentWeek) continue;
+    const file = join(ECO_DIR, `${wLabel}.json`);
+    if (existsSync(file)) {
+      try {
+        const parsed = JSON.parse(readFileSync(file, 'utf8'));
+        weekHistory.push(parsed);
+      } catch {}
+    }
+  }
+  // weekHistory[0] = most recent prior week
+
+  if (weekHistory.length === 0) return streaks;
+
+  // Build lookup: { weekIdx -> { pkgName -> growth_pct } }
+  const weekMaps = weekHistory.map(wdata => {
+    const m = {};
+    for (const entries of Object.values(wdata.categories || {})) {
+      for (const e of entries) {
+        m[e.name] = e.growth_pct;
+      }
+    }
+    return m;
+  });
+
+  // For each package that appeared in the most recent week, count streak
+  const allPkgNames = new Set(Object.keys(weekMaps[0] || {}));
+  for (const name of allPkgNames) {
+    let streak = 0;
+    for (const wmap of weekMaps) {
+      const gp = wmap[name];
+      if (gp !== null && gp !== undefined && gp > 0) {
+        streak++;
+      } else {
+        break; // streak broken
+      }
+    }
+    streaks[name] = streak;
+  }
+
+  return streaks;
+}
+
+// ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
 
@@ -315,19 +475,43 @@ async function main() {
     if (tw === null) {
       // Download fetch failed — include separately, never filter by MIN_DOWNLOADS
       fetchFailCount++;
-      fetchFailedEntries.push({ ...info, this_week: null, prev_week: pw, growth_pct: null, fetch_failed: true });
+      fetchFailedEntries.push({ ...info, this_week: null, prev_week: pw, growth_pct: null, fetch_failed: true,
+        gh_stars: null, days_since_publish: info.date ? Math.floor((Date.now() - new Date(info.date).getTime()) / 86400000) : null,
+        quality_score: null, growth_streak: 0 });
       continue;
     }
 
     if (tw < MIN_DOWNLOADS) continue; // genuinely low-download, skip
 
     const growthPct = (pw !== null && pw > 0) ? Math.round((tw - pw) / pw * 100) : null;
-    qualifiedEntries.push({ ...info, this_week: tw, prev_week: pw ?? null, growth_pct: growthPct, fetch_failed: false });
+    const daysSincePublish = info.date ? Math.floor((Date.now() - new Date(info.date).getTime()) / 86400000) : null;
+    qualifiedEntries.push({ ...info, this_week: tw, prev_week: pw ?? null, growth_pct: growthPct, fetch_failed: false,
+      gh_stars: null, days_since_publish: daysSincePublish, quality_score: null, growth_streak: 0 });
   }
 
   const totalTracked = qualifiedEntries.length;
   console.error(`[ecosystem] ${totalTracked} packages with >=${MIN_DOWNLOADS} downloads this week`);
   console.error(`[ecosystem] ${fetchFailCount} packages with failed download fetches (not filtered, preserved in output)`);
+
+  // 3b. Enrich: GitHub stars (top N by downloads)
+  console.error(`[enrichment] Fetching GitHub stars for top ${MAX_GH_ENRICHMENT} packages...`);
+  await enrichGitHubStars(qualifiedEntries);
+
+  // 3c. Enrich: npms.io quality scores
+  console.error(`[enrichment] Fetching npms.io quality scores...`);
+  const qualifiedNames = qualifiedEntries.map(e => e.name);
+  const npmsScores = await fetchNpmsScores(qualifiedNames);
+  for (const entry of qualifiedEntries) {
+    entry.quality_score = npmsScores[entry.name] ?? null;
+  }
+
+  // 3d. Compute growth streaks from historical JSON files
+  const week = isoWeek();
+  console.error(`[enrichment] Computing growth streaks from historical data...`);
+  const streaks = computeGrowthStreaks(week);
+  for (const entry of qualifiedEntries) {
+    entry.growth_streak = streaks[entry.name] ?? 0;
+  }
 
   // 4. Group by category (qualified packages only)
   const categories = {};
@@ -352,7 +536,6 @@ async function main() {
     .slice(0, 15);
 
   // 6. Build output
-  const week = isoWeek();
   const output = {
     week,
     generated: new Date().toISOString(),

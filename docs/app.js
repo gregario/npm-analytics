@@ -344,6 +344,33 @@ function fmt(n) {
   return n.toLocaleString();
 }
 
+function fmtStars(n) {
+  if (n == null) return '<span class="muted">—</span>';
+  if (n >= 1000) return `<span class="stars">★ ${(n / 1000).toFixed(1)}k</span>`;
+  return `<span class="stars">★ ${n}</span>`;
+}
+
+function fmtAge(days) {
+  if (days == null) return '<span class="muted">—</span>';
+  if (days === 0) return '<span class="badge badge-new">today</span>';
+  if (days < 7) return `<span class="age-new">${days}d</span>`;
+  if (days < 30) return `<span class="age-recent">${Math.round(days / 7)}w</span>`;
+  return `<span class="age-old">${Math.round(days / 30)}mo</span>`;
+}
+
+function fmtStreak(n) {
+  if (!n || n === 0) return '<span class="muted">—</span>';
+  const fire = n >= 3 ? '🔥' : '↑';
+  return `<span class="streak" title="${n} consecutive weeks of positive growth">${fire} ${n}w</span>`;
+}
+
+function fmtQuality(score) {
+  if (score == null) return '<span class="muted">—</span>';
+  const pct = Math.round(score * 100);
+  const cls = pct >= 70 ? 'quality-high' : pct >= 40 ? 'quality-mid' : 'quality-low';
+  return `<span class="${cls}" title="npms.io quality score">${pct}</span>`;
+}
+
 function growthBadge(pct) {
   if (pct === null) return '<span class="badge badge-new">NEW</span>';
   const cls = pct >= 50 ? 'badge-hot' : pct >= 0 ? 'badge-up' : 'badge-down';
@@ -388,7 +415,10 @@ function renderMarket() {
     r => `<span class="num">${fmt(r.this_week)}</span>`,
     r => `<span class="num muted">${fmt(r.prev_week)}</span>`,
     r => growthBadge(r.growth_pct),
-    r => `<span class="date">${r.date}</span>`,
+    r => fmtStreak(r.growth_streak),
+    r => fmtStars(r.gh_stars),
+    r => fmtQuality(r.quality_score),
+    r => fmtAge(r.days_since_publish),
   ]);
 
   // Top by growth
@@ -397,7 +427,10 @@ function renderMarket() {
     r => `<span class="desc">${r.description || ''}</span>`,
     r => `<span class="num">${fmt(r.this_week)}</span>`,
     r => growthBadge(r.growth_pct),
-    r => `<span class="date">${r.date}</span>`,
+    r => fmtStreak(r.growth_streak),
+    r => fmtStars(r.gh_stars),
+    r => fmtQuality(r.quality_score),
+    r => fmtAge(r.days_since_publish),
   ]);
 
   // Brand new
@@ -405,7 +438,9 @@ function renderMarket() {
     r => pkgLink(r.name, r.repo),
     r => `<span class="desc">${r.description || ''}</span>`,
     r => `<span class="num">${fmt(r.this_week)}</span>`,
-    r => `<span class="date">${r.date}</span>`,
+    r => fmtStars(r.gh_stars),
+    r => fmtQuality(r.quality_score),
+    r => fmtAge(r.days_since_publish),
     r => `<span class="keyword">${r.keyword}</span>`,
   ]);
 }
