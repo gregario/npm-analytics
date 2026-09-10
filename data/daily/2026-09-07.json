@@ -4,8 +4,8 @@
     "interpolated": true,
     "reason": "npm_outage",
     "detected": "2026-09-09",
-    "lastChecked": "2026-09-09",
-    "checkCount": 0
+    "lastChecked": "2026-09-10",
+    "checkCount": 1
   },
   "packages": {
     "warhammer-oracle": {
@@ -33,15 +33,15 @@
       "stars": 3,
       "forks": 0
     },
-    "lego-oracle": {
-      "downloads": 10,
-      "stars": 3,
-      "forks": 1
-    },
     "godot-forge": {
       "downloads": 7,
       "stars": 8,
       "forks": 3
+    },
+    "lego-oracle": {
+      "downloads": 10,
+      "stars": 3,
+      "forks": 1
     },
     "hearthstone-oracle": {
       "downloads": 7,
