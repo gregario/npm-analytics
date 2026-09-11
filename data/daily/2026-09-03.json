@@ -4,8 +4,8 @@
     "interpolated": true,
     "reason": "npm_outage",
     "detected": "2026-09-05",
-    "lastChecked": "2026-09-10",
-    "checkCount": 5
+    "lastChecked": "2026-09-11",
+    "checkCount": 6
   },
   "packages": {
     "warhammer-oracle": {
@@ -18,14 +18,14 @@
       "stars": 2,
       "forks": 1
     },
-    "mtg-oracle": {
-      "downloads": 4,
-      "stars": 4,
-      "forks": 1
-    },
     "astronomy-oracle": {
       "downloads": 4,
       "stars": 3,
+      "forks": 1
+    },
+    "mtg-oracle": {
+      "downloads": 4,
+      "stars": 4,
       "forks": 1
     },
     "lorcana-oracle": {
