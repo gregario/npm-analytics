@@ -4,8 +4,8 @@
     "interpolated": true,
     "reason": "npm_outage",
     "detected": "2026-09-09",
-    "lastChecked": "2026-09-15",
-    "checkCount": 6
+    "lastChecked": "2026-09-16",
+    "checkCount": 7
   },
   "packages": {
     "warhammer-oracle": {
@@ -28,11 +28,6 @@
       "stars": 3,
       "forks": 1
     },
-    "tft-oracle": {
-      "downloads": 7,
-      "stars": 1,
-      "forks": 0
-    },
     "lorcana-oracle": {
       "downloads": 11,
       "stars": 3,
@@ -52,6 +47,11 @@
       "downloads": 7,
       "stars": 4,
       "forks": 1
+    },
+    "tft-oracle": {
+      "downloads": 7,
+      "stars": 1,
+      "forks": 0
     },
     "dnd-oracle": {
       "downloads": 7,
