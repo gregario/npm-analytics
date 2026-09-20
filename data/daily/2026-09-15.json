@@ -4,8 +4,8 @@
     "interpolated": true,
     "reason": "npm_outage",
     "detected": "2026-09-17",
-    "lastChecked": "2026-09-19",
-    "checkCount": 2
+    "lastChecked": "2026-09-20",
+    "checkCount": 3
   },
   "packages": {
     "warhammer-oracle": {
