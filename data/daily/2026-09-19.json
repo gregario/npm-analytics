@@ -1,20 +1,13 @@
 {
-  "date": "2026-09-17",
-  "_meta": {
-    "interpolated": true,
-    "reason": "npm_outage",
-    "detected": "2026-09-19",
-    "lastChecked": "2026-09-21",
-    "checkCount": 2
-  },
+  "date": "2026-09-19",
   "packages": {
     "warhammer-oracle": {
-      "downloads": 11,
+      "downloads": 8,
       "stars": 10,
       "forks": 3
     },
     "brewers-almanack": {
-      "downloads": 8,
+      "downloads": 7,
       "stars": 2,
       "forks": 1
     },
@@ -24,32 +17,32 @@
       "forks": 1
     },
     "astronomy-oracle": {
-      "downloads": 6,
+      "downloads": 8,
       "stars": 3,
       "forks": 1
     },
     "dnd-oracle": {
-      "downloads": 13,
+      "downloads": 16,
       "stars": 6,
-      "forks": 2
+      "forks": 1
     },
     "godot-forge": {
-      "downloads": 6,
+      "downloads": 4,
       "stars": 8,
       "forks": 3
     },
     "tft-oracle": {
-      "downloads": 5,
+      "downloads": 9,
       "stars": 1,
       "forks": 0
     },
     "lorcana-oracle": {
-      "downloads": 8,
+      "downloads": 10,
       "stars": 3,
       "forks": 0
     },
     "lego-oracle": {
-      "downloads": 6,
+      "downloads": 9,
       "stars": 3,
       "forks": 1
     },
@@ -59,7 +52,7 @@
       "forks": 1
     },
     "3dprint-oracle": {
-      "downloads": 7,
+      "downloads": 12,
       "stars": 1,
       "forks": 1
     },
