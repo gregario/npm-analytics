@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-30",
+  "packages": {
+    "warhammer-oracle": {
+      "downloads": 156,
+      "stars": 10,
+      "forks": 3
+    },
+    "brewers-almanack": {
+      "downloads": 48,
+      "stars": 2,
+      "forks": 1
+    },
+    "onepiece-oracle": {
+      "downloads": 26,
+      "stars": 2,
+      "forks": 1
+    },
+    "dnd-oracle": {
+      "downloads": 7,
+      "stars": 6,
+      "forks": 1
+    },
+    "astronomy-oracle": {
+      "downloads": 7,
+      "stars": 3,
+      "forks": 1
+    },
+    "lego-oracle": {
+      "downloads": 8,
+      "stars": 3,
+      "forks": 1
+    },
+    "the-rouge": {
+      "downloads": 0,
+      "stars": 7,
+      "forks": 0
+    },
+    "lorcana-oracle": {
+      "downloads": 7,
+      "stars": 3,
+      "forks": 0
+    },
+    "godot-forge": {
+      "downloads": 11,
+      "stars": 8,
+      "forks": 3
+    },
+    "tft-oracle": {
+      "downloads": 13,
+      "stars": 1,
+      "forks": 0
+    },
+    "mtg-oracle": {
+      "downloads": 8,
+      "stars": 4,
+      "forks": 1
+    },
+    "hearthstone-oracle": {
+      "downloads": 8,
+      "stars": 2,
+      "forks": 2
+    },
+    "3dprint-oracle": {
+      "downloads": 38,
+      "stars": 1,
+      "forks": 1
+    },
+    "ai-coding-coach": {
+      "downloads": 0,
+      "stars": 0,
+      "forks": 0
+    }
+  }
+}
