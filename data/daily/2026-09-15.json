@@ -4,8 +4,8 @@
     "interpolated": true,
     "reason": "npm_outage",
     "detected": "2026-09-17",
-    "lastChecked": "2026-10-01",
-    "checkCount": 8
+    "lastChecked": "2026-10-08",
+    "checkCount": 9
   },
   "packages": {
     "warhammer-oracle": {
@@ -48,15 +48,15 @@
       "stars": 3,
       "forks": 0
     },
-    "godot-forge": {
-      "downloads": 12,
-      "stars": 8,
-      "forks": 3
-    },
     "tft-oracle": {
       "downloads": 6,
       "stars": 1,
       "forks": 0
+    },
+    "godot-forge": {
+      "downloads": 12,
+      "stars": 8,
+      "forks": 3
     },
     "mtg-oracle": {
       "downloads": 6,
