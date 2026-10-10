@@ -4,33 +4,33 @@
     "interpolated": true,
     "reason": "npm_outage",
     "detected": "2026-10-08",
-    "lastChecked": "2026-10-09",
-    "checkCount": 1
+    "lastChecked": "2026-10-10",
+    "checkCount": 2
   },
   "packages": {
+    "brewers-almanack": {
+      "downloads": 98,
+      "stars": 2,
+      "forks": 1
+    },
     "warhammer-oracle": {
-      "downloads": 58,
+      "downloads": 34,
       "stars": 10,
       "forks": 3
     },
-    "brewers-almanack": {
-      "downloads": 184,
-      "stars": 2,
-      "forks": 1
-    },
     "onepiece-oracle": {
-      "downloads": 6,
+      "downloads": 8,
       "stars": 2,
-      "forks": 1
-    },
-    "astronomy-oracle": {
-      "downloads": 13,
-      "stars": 3,
       "forks": 1
     },
     "dnd-oracle": {
-      "downloads": 7,
+      "downloads": 9,
       "stars": 6,
+      "forks": 1
+    },
+    "astronomy-oracle": {
+      "downloads": 19,
+      "stars": 3,
       "forks": 1
     },
     "the-rouge": {
@@ -38,38 +38,38 @@
       "stars": 7,
       "forks": 0
     },
-    "lego-oracle": {
-      "downloads": 8,
-      "stars": 3,
-      "forks": 1
-    },
     "lorcana-oracle": {
-      "downloads": 8,
+      "downloads": 10,
       "stars": 3,
       "forks": 0
     },
-    "tft-oracle": {
-      "downloads": 7,
-      "stars": 1,
+    "lego-oracle": {
+      "downloads": 11,
+      "stars": 3,
       "forks": 1
     },
-    "godot-forge": {
-      "downloads": 7,
-      "stars": 8,
-      "forks": 3
-    },
-    "mtg-oracle": {
-      "downloads": 4,
-      "stars": 4,
+    "tft-oracle": {
+      "downloads": 10,
+      "stars": 1,
       "forks": 1
     },
     "3dprint-oracle": {
-      "downloads": 5,
+      "downloads": 7,
       "stars": 1,
       "forks": 1
     },
+    "mtg-oracle": {
+      "downloads": 6,
+      "stars": 4,
+      "forks": 1
+    },
+    "godot-forge": {
+      "downloads": 9,
+      "stars": 8,
+      "forks": 3
+    },
     "hearthstone-oracle": {
-      "downloads": 5,
+      "downloads": 7,
       "stars": 2,
       "forks": 2
     },
