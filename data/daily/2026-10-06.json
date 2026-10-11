@@ -4,8 +4,8 @@
     "interpolated": true,
     "reason": "npm_outage",
     "detected": "2026-10-08",
-    "lastChecked": "2026-10-10",
-    "checkCount": 2
+    "lastChecked": "2026-10-11",
+    "checkCount": 3
   },
   "packages": {
     "brewers-almanack": {
@@ -38,11 +38,6 @@
       "stars": 7,
       "forks": 0
     },
-    "lorcana-oracle": {
-      "downloads": 10,
-      "stars": 3,
-      "forks": 0
-    },
     "lego-oracle": {
       "downloads": 11,
       "stars": 3,
@@ -52,6 +47,11 @@
       "downloads": 10,
       "stars": 1,
       "forks": 1
+    },
+    "lorcana-oracle": {
+      "downloads": 10,
+      "stars": 3,
+      "forks": 0
     },
     "3dprint-oracle": {
       "downloads": 7,
