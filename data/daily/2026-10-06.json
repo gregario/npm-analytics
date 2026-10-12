@@ -4,8 +4,8 @@
     "interpolated": true,
     "reason": "npm_outage",
     "detected": "2026-10-08",
-    "lastChecked": "2026-10-11",
-    "checkCount": 3
+    "lastChecked": "2026-10-12",
+    "checkCount": 4
   },
   "packages": {
     "brewers-almanack": {
@@ -18,9 +18,14 @@
       "stars": 10,
       "forks": 3
     },
-    "onepiece-oracle": {
-      "downloads": 8,
-      "stars": 2,
+    "the-rouge": {
+      "downloads": 0,
+      "stars": 7,
+      "forks": 0
+    },
+    "astronomy-oracle": {
+      "downloads": 19,
+      "stars": 3,
       "forks": 1
     },
     "dnd-oracle": {
@@ -28,15 +33,10 @@
       "stars": 6,
       "forks": 1
     },
-    "astronomy-oracle": {
-      "downloads": 19,
-      "stars": 3,
+    "onepiece-oracle": {
+      "downloads": 8,
+      "stars": 2,
       "forks": 1
-    },
-    "the-rouge": {
-      "downloads": 0,
-      "stars": 7,
-      "forks": 0
     },
     "lego-oracle": {
       "downloads": 11,
@@ -53,6 +53,11 @@
       "stars": 3,
       "forks": 0
     },
+    "godot-forge": {
+      "downloads": 9,
+      "stars": 8,
+      "forks": 3
+    },
     "3dprint-oracle": {
       "downloads": 7,
       "stars": 1,
@@ -62,11 +67,6 @@
       "downloads": 6,
       "stars": 4,
       "forks": 1
-    },
-    "godot-forge": {
-      "downloads": 9,
-      "stars": 8,
-      "forks": 3
     },
     "hearthstone-oracle": {
       "downloads": 7,
