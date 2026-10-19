@@ -4,33 +4,28 @@
     "interpolated": true,
     "reason": "npm_outage",
     "detected": "2026-10-17",
-    "lastChecked": "2026-10-18",
-    "checkCount": 1
+    "lastChecked": "2026-10-19",
+    "checkCount": 2
   },
   "packages": {
-    "brewers-almanack": {
-      "downloads": 192,
-      "stars": 3,
-      "forks": 1
-    },
     "warhammer-oracle": {
-      "downloads": 33,
+      "downloads": 155,
       "stars": 11,
       "forks": 3
     },
-    "dnd-oracle": {
-      "downloads": 8,
-      "stars": 7,
-      "forks": 1
-    },
-    "astronomy-oracle": {
-      "downloads": 9,
+    "brewers-almanack": {
+      "downloads": 53,
       "stars": 3,
       "forks": 1
     },
-    "onepiece-oracle": {
-      "downloads": 4,
-      "stars": 2,
+    "astronomy-oracle": {
+      "downloads": 7,
+      "stars": 3,
+      "forks": 1
+    },
+    "lego-oracle": {
+      "downloads": 11,
+      "stars": 4,
       "forks": 1
     },
     "the-rouge": {
@@ -38,43 +33,48 @@
       "stars": 7,
       "forks": 0
     },
-    "lego-oracle": {
-      "downloads": 14,
-      "stars": 4,
-      "forks": 1
-    },
-    "lorcana-oracle": {
+    "tft-oracle": {
       "downloads": 7,
-      "stars": 4,
-      "forks": 0
-    },
-    "3dprint-oracle": {
-      "downloads": 11,
       "stars": 1,
       "forks": 1
     },
+    "dnd-oracle": {
+      "downloads": 7,
+      "stars": 7,
+      "forks": 1
+    },
+    "lorcana-oracle": {
+      "downloads": 11,
+      "stars": 4,
+      "forks": 0
+    },
     "godot-forge": {
-      "downloads": 9,
+      "downloads": 6,
       "stars": 9,
       "forks": 3
     },
-    "tft-oracle": {
-      "downloads": 5,
+    "3dprint-oracle": {
+      "downloads": 8,
       "stars": 1,
       "forks": 1
     },
     "mtg-oracle": {
-      "downloads": 7,
+      "downloads": 11,
       "stars": 4,
       "forks": 1
     },
     "hearthstone-oracle": {
-      "downloads": 7,
+      "downloads": 12,
       "stars": 2,
       "forks": 2
     },
+    "onepiece-oracle": {
+      "downloads": 5,
+      "stars": 2,
+      "forks": 1
+    },
     "ai-coding-coach": {
-      "downloads": 0,
+      "downloads": 2,
       "stars": 0,
       "forks": 0
     }
