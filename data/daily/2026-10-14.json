@@ -4,8 +4,8 @@
     "interpolated": true,
     "reason": "npm_outage",
     "detected": "2026-10-16",
-    "lastChecked": "2026-10-19",
-    "checkCount": 3
+    "lastChecked": "2026-10-20",
+    "checkCount": 4
   },
   "packages": {
     "warhammer-oracle": {
@@ -28,40 +28,40 @@
       "stars": 4,
       "forks": 1
     },
-    "the-rouge": {
-      "downloads": 1,
-      "stars": 7,
+    "lorcana-oracle": {
+      "downloads": 10,
+      "stars": 4,
       "forks": 0
-    },
-    "tft-oracle": {
-      "downloads": 6,
-      "stars": 1,
-      "forks": 1
     },
     "dnd-oracle": {
       "downloads": 7,
       "stars": 7,
       "forks": 1
     },
-    "lorcana-oracle": {
-      "downloads": 10,
-      "stars": 4,
-      "forks": 0
+    "tft-oracle": {
+      "downloads": 6,
+      "stars": 1,
+      "forks": 1
     },
     "godot-forge": {
       "downloads": 7,
       "stars": 9,
       "forks": 3
     },
+    "mtg-oracle": {
+      "downloads": 10,
+      "stars": 4,
+      "forks": 1
+    },
     "3dprint-oracle": {
       "downloads": 9,
       "stars": 1,
       "forks": 1
     },
-    "mtg-oracle": {
-      "downloads": 10,
-      "stars": 4,
-      "forks": 1
+    "the-rouge": {
+      "downloads": 1,
+      "stars": 7,
+      "forks": 0
     },
     "hearthstone-oracle": {
       "downloads": 11,
