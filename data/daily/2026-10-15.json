@@ -4,8 +4,8 @@
     "interpolated": true,
     "reason": "npm_outage",
     "detected": "2026-10-17",
-    "lastChecked": "2026-10-20",
-    "checkCount": 3
+    "lastChecked": "2026-10-21",
+    "checkCount": 4
   },
   "packages": {
     "warhammer-oracle": {
@@ -38,11 +38,6 @@
       "stars": 7,
       "forks": 1
     },
-    "tft-oracle": {
-      "downloads": 7,
-      "stars": 1,
-      "forks": 1
-    },
     "godot-forge": {
       "downloads": 6,
       "stars": 9,
@@ -53,15 +48,20 @@
       "stars": 4,
       "forks": 1
     },
+    "the-rouge": {
+      "downloads": 1,
+      "stars": 7,
+      "forks": 0
+    },
     "3dprint-oracle": {
       "downloads": 8,
       "stars": 1,
       "forks": 1
     },
-    "the-rouge": {
-      "downloads": 1,
-      "stars": 7,
-      "forks": 0
+    "tft-oracle": {
+      "downloads": 7,
+      "stars": 1,
+      "forks": 1
     },
     "hearthstone-oracle": {
       "downloads": 12,
