@@ -1,19 +1,19 @@
 {
-  "last_discovered": "2026-10-26",
+  "last_discovered": "2026-10-27",
   "packages": [
     "warhammer-oracle",
     "brewers-almanack",
     "astronomy-oracle",
     "lego-oracle",
     "lorcana-oracle",
-    "the-rouge",
+    "ai-coding-coach",
+    "dnd-oracle",
     "tft-oracle",
     "godot-forge",
-    "dnd-oracle",
     "mtg-oracle",
-    "3dprint-oracle",
     "hearthstone-oracle",
+    "3dprint-oracle",
     "onepiece-oracle",
-    "ai-coding-coach"
+    "the-rouge"
   ]
 }
