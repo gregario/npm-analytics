@@ -1,80 +1,73 @@
 {
   "date": "2026-10-30",
-  "_meta": {
-    "interpolated": true,
-    "reason": "npm_outage",
-    "detected": "2026-11-01",
-    "lastChecked": "2026-11-01",
-    "checkCount": 0
-  },
   "packages": {
     "warhammer-oracle": {
-      "downloads": 219,
+      "downloads": 274,
       "stars": 12,
       "forks": 3
     },
     "brewers-almanack": {
-      "downloads": 60,
+      "downloads": 14,
       "stars": 3,
       "forks": 1
     },
     "astronomy-oracle": {
-      "downloads": 15,
+      "downloads": 14,
       "stars": 3,
       "forks": 1
     },
-    "lorcana-oracle": {
-      "downloads": 7,
-      "stars": 4,
-      "forks": 0
-    },
     "ai-coding-coach": {
-      "downloads": 0,
+      "downloads": 1,
       "stars": 0,
       "forks": 0
     },
+    "lorcana-oracle": {
+      "downloads": 14,
+      "stars": 4,
+      "forks": 0
+    },
     "lego-oracle": {
-      "downloads": 18,
+      "downloads": 20,
       "stars": 4,
       "forks": 1
     },
-    "dnd-oracle": {
-      "downloads": 6,
-      "stars": 8,
-      "forks": 1
-    },
-    "hearthstone-oracle": {
-      "downloads": 7,
-      "stars": 2,
-      "forks": 2
-    },
     "godot-forge": {
-      "downloads": 19,
+      "downloads": 10,
       "stars": 9,
       "forks": 3
     },
-    "3dprint-oracle": {
-      "downloads": 7,
+    "tft-oracle": {
+      "downloads": 20,
       "stars": 1,
       "forks": 1
     },
-    "tft-oracle": {
-      "downloads": 16,
+    "dnd-oracle": {
+      "downloads": 12,
+      "stars": 8,
+      "forks": 1
+    },
+    "3dprint-oracle": {
+      "downloads": 13,
       "stars": 1,
       "forks": 1
+    },
+    "hearthstone-oracle": {
+      "downloads": 15,
+      "stars": 2,
+      "forks": 2
+    },
+    "mtg-oracle": {
+      "downloads": 11,
+      "stars": 4,
+      "forks": 2
     },
     "onepiece-oracle": {
-      "downloads": 6,
+      "downloads": 10,
       "stars": 2,
       "forks": 1
     },
-    "mtg-oracle": {
-      "downloads": 6,
-      "stars": 4,
-      "forks": 1
-    },
     "the-rouge": {
-      "downloads": 2,
+      "downloads": 0,
       "stars": 7,
       "forks": 0
     }
