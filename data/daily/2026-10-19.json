@@ -4,8 +4,8 @@
     "interpolated": true,
     "reason": "npm_outage",
     "detected": "2026-10-21",
-    "lastChecked": "2026-10-28",
-    "checkCount": 7
+    "lastChecked": "2026-11-04",
+    "checkCount": 8
   },
   "packages": {
     "warhammer-oracle": {
@@ -33,24 +33,19 @@
       "stars": 4,
       "forks": 0
     },
-    "ai-coding-coach": {
-      "downloads": 1,
-      "stars": 0,
-      "forks": 0
-    },
-    "dnd-oracle": {
-      "downloads": 9,
-      "stars": 8,
-      "forks": 1
-    },
     "godot-forge": {
       "downloads": 6,
       "stars": 9,
       "forks": 3
     },
-    "mtg-oracle": {
-      "downloads": 6,
-      "stars": 4,
+    "tft-oracle": {
+      "downloads": 5,
+      "stars": 1,
+      "forks": 1
+    },
+    "dnd-oracle": {
+      "downloads": 9,
+      "stars": 8,
       "forks": 1
     },
     "hearthstone-oracle": {
@@ -63,9 +58,9 @@
       "stars": 1,
       "forks": 1
     },
-    "tft-oracle": {
-      "downloads": 5,
-      "stars": 1,
+    "mtg-oracle": {
+      "downloads": 6,
+      "stars": 4,
       "forks": 1
     },
     "onepiece-oracle": {
@@ -76,6 +71,11 @@
     "the-rouge": {
       "downloads": 0,
       "stars": 7,
+      "forks": 0
+    },
+    "ai-coding-coach": {
+      "downloads": 1,
+      "stars": 0,
       "forks": 0
     }
   }
