@@ -4,8 +4,8 @@
     "interpolated": true,
     "reason": "npm_outage",
     "detected": "2026-10-22",
-    "lastChecked": "2026-11-19",
-    "checkCount": 10
+    "lastChecked": "2026-11-26",
+    "checkCount": 11
   },
   "packages": {
     "warhammer-oracle": {
@@ -33,20 +33,15 @@
       "stars": 4,
       "forks": 1
     },
-    "dnd-oracle": {
-      "downloads": 17,
-      "stars": 8,
-      "forks": 1
-    },
     "godot-forge": {
       "downloads": 4,
       "stars": 9,
       "forks": 3
     },
-    "hearthstone-oracle": {
-      "downloads": 8,
-      "stars": 2,
-      "forks": 2
+    "dnd-oracle": {
+      "downloads": 17,
+      "stars": 8,
+      "forks": 1
     },
     "tft-oracle": {
       "downloads": 4,
@@ -62,6 +57,11 @@
       "downloads": 5,
       "stars": 4,
       "forks": 1
+    },
+    "hearthstone-oracle": {
+      "downloads": 8,
+      "stars": 2,
+      "forks": 2
     },
     "onepiece-oracle": {
       "downloads": 4,
